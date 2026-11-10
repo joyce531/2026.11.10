@@ -7,7 +7,9 @@ Chinese name: 纳西文化多模态 AI 学习与创作平台
 
 This project is an AI-powered cultural learning and creative platform based on Naxi culture, especially Dongba script, Naxi ancient music, and Naxi Datiao dance.
 
-The goal is to transform the existing Naxi cultural learning game into an AI-native interactive application.
+The platform combines the existing Godot cultural learning game with three independent professional Agent entry points: Dongba handwriting evaluation, music creation and dance video creation.
+Streamlit remains the single platform frontend and app.py remains its startup entry. The three Agents share cultural knowledge and infrastructure; do not build a master/orchestrator Agent. Interface contracts and deterministic prototypes must not be presented as implemented Agents.
+Milestone 3B implements the first DongbaHandwritingAgent in naxi_agents/dongba_agent.py using one Responses API dual-image request with explicit Mock fallback. Milestone 5 music uses naxi_agents/music_agent.py for one optional model planning request followed by deterministic MIDI/sample rendering. Dance remains an unimplemented contract.
 
 The project is being developed for an Artificial Intelligence Application Competition.
 
@@ -22,47 +24,58 @@ Do not over-engineer the initial demo.
 
 ## 2. Core Product Modules
 
-### Module A: Dongba Script AI Agent
+### Module A: 东巴文 AI 临摹评价 (Target-conditioned Handwriting Evaluation)
 
 Priority: HIGHEST. This is the core demonstration feature.
 
 Main workflow:
-1. User uploads a handwritten Dongba character image.
-2. The system preprocesses the image if necessary.
-3. A vision model API analyzes the handwritten character.
-4. The system retrieves relevant entries from the Dongba knowledge base.
-5. The system compares the recognition result with known character information.
-6. The Agent generates an explanation and learning feedback.
-7. The interface displays the result, confidence/uncertainty, and references.
+1. Select one of the five existing target glyphs from data/glyphs/glyph_catalog.csv. Map character_id to glyph_id at the service boundary; do not change CSV columns.
+2. Display the reference glyph and user-provided Chinese meaning. Do not invent pronunciation, stroke order or expert verification.
+3. User writes with a mouse on an online canvas or uploads a photograph of paper handwriting.
+4. Preprocess both images and compare handwriting against the selected target.
+5. Measure shape similarity, proportions, position/direction and regional structure.
+6. Provide explainable errors and specific Chinese learning suggestions.
+7. Display the reference and submitted handwriting side by side, with measured scores and limitations.
 
 Important requirements:
+- This is target-conditioned handwriting evaluation, NOT general OCR or unknown-character identification.
+- This module remains the highest development priority. Preserve the existing music and dance architecture.
+- Reject clearly incorrect writing; never force a positive assessment. For large differences say:
+  “当前书写与目标字差异较大，无法判定为正确临摹，请重新观察示范字。”
+- Local prototype similarity scores must be computed from images. The real vision result similarity_score is a model-estimated visual similarity, explicitly uncalibrated and not recognition accuracy. Display and store the two sources separately; do not pass model estimates off as measured scores or human labels.
+- Real evaluation uses one non-streaming OpenAI Responses API request with two images and six-field validated JSON output. No tool loop, automatic retries or automatic model replacement.
+- Four final statuses are match/close/incorrect/uncertain. Blank, tiny, dark or heavily blurred inputs may be rejected locally with source=quality_check; API/key/model/JSON failures automatically fall back to explicitly labelled Mock with a safe fallback_reason.
+- Mock mode is explicitly labelled, uses local measurements and never calls the API. USE_REAL_AI=true enables real-first evaluation; otherwise use Mock only. Retain the page Mock override.
+- Without real glyph data, provide a standard data interface and explicit missing-data state. Non-cultural geometric test fixtures must never appear as Dongba teaching characters.
+- Support future import from the existing Godot teaching game without modifying that repository.
+- Keep local measurement in services/dongba_evaluator.py, image quality in services/handwriting_quality.py, API/result validation in services/dongba_vision.py and orchestration in naxi_agents/dongba_agent.py. Do not put algorithms or keys in pages.
+- Reserve training records with character_id, reference_image, user_handwriting_image, similarity_label, structure_errors, evaluation_feedback and data_source. Do not collect player images automatically or treat prototype scores as human labels.
 - Do not claim that a general vision model is a specialized Dongba handwriting recognition model.
-- Clearly distinguish visual recognition, dictionary matching, and cultural interpretation.
+- Clearly distinguish measured image similarity, model-assisted analysis and sourced cultural interpretation.
 - Do not invent Dongba meanings, pronunciations, or historical origins.
 - If the result is uncertain, explicitly say so.
 - Preserve alternative interpretations when reliable sources disagree.
-- Make it possible to replace the initial vision API with a specialized fine-tuned model in the future.
+- Make it possible to replace the local evaluation prototype with a specialized metric-learning model and optional vision assistance in the future.
 
 ### Module B: Naxi Ancient Music AI Studio
 
-Main workflow:
-1. User selects musical style and mood.
-2. User selects available instrument timbres.
-3. User adjusts musical parameters such as tempo and duration.
-4. The system uses a music-generation API or other suitable generation technology.
-5. The user can listen to and save the generated result.
-
-The system should gradually incorporate:
-- Dongjing music.
-- Baisha Fine Music.
-- Traditional instrument timbres.
-- Cultural and musical constraints.
-- Educational explanations of musical structures.
+Main workflow (Milestone 5):
+1. Upload MIDI or supported partwise MusicXML/MXL; no free composition mode.
+2. Parse real note/tempo/meter/structure events and show limitations; do not fake PDF/image recognition.
+3. Choose existing instrument labels, Dongjing/Baisha reference category and melody retention.
+4. Query data/music/music_library.sqlite3 and read-only original recordings.
+5. Use one optional Responses API planning call (USE_REAL_AI / OPENAI_API_KEY / MUSIC_MODEL), or explicitly labelled local rules; no audio upload.
+6. Python tools arrange MIDI and synthesize at most 30 seconds of WAV from limited real samples, excerpts and clearly labelled auxiliary sound.
+7. Play and download actual output; show per-source usage and planning provenance.
 
 Important:
-- Do not label arbitrary AI-generated music as authentic traditional Naxi music.
-- Distinguish AI-inspired compositions from historically documented traditional works.
-- Do not invent musical rules or instrument histories.
+- Music labels and directory categories are not verified audio identities or traditional composition rules.
+- The current 笛子.mp3 is byte-identical to baisha_01.mp3; never use it as an isolated flute sample.
+- Auto pitch candidates support only +/-3 semitones and may contain other sound. Do not claim a complete playable instrument library.
+- Ensemble recordings provide acoustic reference only; do not use them as isolated instrument samples.
+- Distinguish AI planning, deterministic synthesis and local-rule fallback. Do not call a local rule plan an AI result.
+- Do not label the adaptation as authentic traditional Naxi music; culturally validated style analysis remains future work.
+- Do not invent musical rules or instrument histories. Do not modify/delete/move original recordings.
 
 ### Module C: Naxi Datiao AI Video Studio
 
@@ -90,12 +103,14 @@ The intended architecture is:
 
 Frontend:
 - Streamlit for the initial demo.
+- Five pages: home, Godot learning game, Dongba evaluation, music creation and dance video creation; use st.Page and st.navigation.
+- Connect existing Godot Web exports by URL (GODOT_WEB_URL) or a read-only local file server. Never modify, copy or move the original game resources as part of this integration.
 - Python-based web interface.
 - Chinese user interface.
 
 Backend:
 - Python.
-- OpenAI Agents SDK where appropriate.
+- OpenAI Agents SDK is not installed in the current environment. Milestone 3B uses the authorized Responses API fallback and a single-request visual workflow. Project implementations live under naxi_agents to avoid the SDK's agents import name; retain old agents/ contracts without using them as runtime implementations.
 - Lightweight custom Agent Harness.
 
 AI models:
@@ -149,10 +164,10 @@ Tools are executable functions that the Agent can call.
 
 Initial planned tools:
 
-- recognize_dongba_image
+- evaluate_dongba_handwriting
 - search_dongba_dictionary
 - retrieve_cultural_knowledge
-- evaluate_recognition_result
+- evaluate_handwriting_result
 - generate_music
 - inspect_music_parameters
 - generate_dance_video
@@ -163,7 +178,7 @@ Skills are reusable domain-specific instructions.
 
 Planned skills:
 
-- dongba_recognition
+- dongba_handwriting_evaluation
 - dongba_cultural_interpretation
 - naxi_music_composition
 - naxi_datiao_knowledge
@@ -228,7 +243,6 @@ Naxi_AI_Demo/
 │   └── dance.py
 │
 ├── agents/
-│   ├── orchestrator.py
 │   ├── dongba_agent.py
 │   ├── music_agent.py
 │   └── dance_agent.py
@@ -239,14 +253,16 @@ Naxi_AI_Demo/
 │   └── dance_tools.py
 │
 ├── skills/
-│   ├── dongba_recognition.md
+│   ├── dongba_handwriting_evaluation.md
 │   ├── naxi_music.md
 │   └── naxi_datiao.md
 │
 ├── services/
+│   ├── dongba_evaluator.py
+│   ├── dongba_data.py
 │   ├── vision_service.py
 │   ├── music_service.py
-│   ├── video_service.py
+│   ├── dance_service.py
 │   └── retrieval_service.py
 │
 ├── database/
@@ -276,6 +292,9 @@ Create files only when their functionality is needed.
 
 - Never hardcode API keys.
 - Store secrets in .env or Streamlit secrets.
+- Dongba API settings read project-root .env with python-dotenv; process environment overrides it. DONGBA_VISION_MODEL defaults to gpt-6-luna. Use the official OpenAI endpoint; do not log requests, keys or Base64 images.
+- Save optional learning metadata to the per-user NaxiAIStudio/learning.sqlite3 outside the repository. Store source/mock flag, character_id, input method, UTC timestamp, status, score and suggestions; no uploaded image or stroke data is automatically persisted. This is a single-user local demo, not a multi-user account system.
+- Canvas submissions retain ordered stroke coordinates in session and allow explicit download. Photographs cannot establish stroke order. Original glyph files are read-only.
 - Never commit .env or secrets.toml.
 - Provide .env.example with placeholder values only.
 - Do not expose API keys in frontend code or logs.
@@ -340,13 +359,14 @@ Phase 1: Working application skeleton
 - Establish shared styling and navigation.
 - Ensure the application runs locally.
 
-Phase 2: Dongba recognition Agent
-- Select a suitable vision API.
-- Implement image upload.
-- Implement initial recognition.
-- Establish a small verified Dongba dictionary.
-- Implement retrieval and result evaluation.
-- Display sources and uncertainty.
+Phase 2: Target-conditioned Dongba handwriting evaluation (current highest priority)
+- Establish a reviewed reference-glyph catalog and Godot import contract; do not invent cultural data.
+- Implement online mouse drawing and photographed-handwriting upload, preview and preprocessing.
+- Implement a local shape/structure comparison prototype with explainable Chinese feedback.
+- Test clear mismatches, blanks, missing structure and natural handwriting variation.
+- Display computed similarity and prototype limitations, not recognition accuracy.
+- Reserve vision API and consent-based training-data interfaces; later explore Siamese Networks or metric learning when real labeled samples are available.
+- Add vision-assisted analysis and Agent feedback only after the local workflow works.
 
 Phase 3: Music generation
 - Select a suitable music API.

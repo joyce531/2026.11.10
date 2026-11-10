@@ -1,0 +1,1 @@
+第 19 页使用外部 HTTPS 演示链接，不在幻灯片内嵌大视频。将三条有权分享的真实录屏地址填写在 [links.json](links.json) 的 `dongba`、`music`、`dance` 字段中，再运行 `scripts/enable_videos.py`。空字段会显示“待添加”。镜头要求见 `../../research/DEMO_VIDEO_SHOTLIST.md`；不可泄露账号、密钥或将 Mock 冒充真实 AI。

@@ -1,0 +1,345 @@
+@charset "UTF-8";
+:root{--ink:#292a29;--serif:"STSong","Songti SC","Noto Serif CJK SC","SimSun",serif;--sans:"Microsoft YaHei","PingFang SC",sans-serif}
+*{box-sizing:border-box}
+html{width:100%;height:100%;overflow:hidden;background:#272c2b}
+body{position:absolute;left:50%;top:50%;width:1600px;height:900px;margin:0;overflow:hidden;transform:translate(-50%,-50%) scale(var(--fit,1));transform-origin:center;background:#e7ddd2;color:var(--ink);font-family:var(--sans);--accent:#365f56;--paper:color-mix(in srgb,var(--accent) 7%,rgb(255 255 255 / 77%));--paper-solid:color-mix(in srgb,var(--accent) 13%,rgb(255 255 255 / 76%));--accent-soft:color-mix(in srgb,var(--accent) 18%,rgb(255 255 255 / 72%))}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+.art-bg{position:absolute;inset:0;background-image:var(--page-art);background-position:center;background-size:cover;filter:saturate(.92) contrast(.98)}
+.art-bg:after{position:absolute;inset:0;content:"";background:linear-gradient(90deg,rgba(241,226,217,.11),transparent 64%)}
+.page-architecture .art-bg:after{background:rgba(226,235,223,.34)}
+.page-tam .art-bg:after{background:rgba(213,225,233,.08)}
+.grain{position:absolute;inset:0;z-index:7;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E")}
+.site-header{position:absolute;z-index:10;left:38px;right:38px;top:19px;height:60px;display:flex;align-items:center;gap:28px;padding:0 19px;background:var(--paper);clip-path:polygon(0 8%,99.4% 0,100% 100%,.4% 93%)}
+.brand{font:700 18px/1 Georgia,serif;letter-spacing:.23em;white-space:nowrap}
+.brand em{font-style:normal;color:var(--accent)}
+.site-nav{display:flex;gap:25px;margin-left:auto}
+.site-nav a{font:700 18px/1.2 var(--sans);letter-spacing:.06em;padding:8px 0;border-bottom:2px solid transparent}
+.site-nav a[aria-current=page]{color:var(--accent);border-color:var(--accent)}
+.header-tools{margin-left:32px}
+.full-btn{padding:7px 14px;border:1px solid var(--accent);background:transparent;color:var(--accent);font-size:16px}
+.folio{position:absolute;left:38px;bottom:28px;z-index:10;color:var(--accent);background:var(--paper);padding:7px 11px;font:700 16px Georgia,serif;letter-spacing:.16em}
+.page-next{position:absolute;right:38px;bottom:27px;z-index:10;padding:8px 16px 9px;background:var(--paper);border-bottom:2px solid var(--accent);color:var(--accent);font:700 18px/1.3 var(--sans)}
+.page-next:after{content:" ↗";font:25px Georgia,serif}
+.eyebrow{color:var(--accent);font:700 18px/1.3 var(--sans);letter-spacing:.13em}
+.eyebrow:before{content:"";display:inline-block;width:31px;height:2px;margin-right:13px;vertical-align:middle;background:currentColor}
+
+/* Cover folio, with the artwork exposed along the right edge. */
+.cover-folio{position:absolute;left:66px;top:101px;width:1044px;height:743px;background:rgba(242,228,221,.98);clip-path:polygon(0 1%,94% 0,100% 20%,94% 44%,99% 71%,93% 100%,0 98%);box-shadow:25px 0 45px rgba(77,42,49,.13)}
+.cover-main{position:absolute;inset:0}
+.cover-content{position:absolute;left:138px;top:142px;width:840px}
+.cover-kicker{font:700 20px/1.3 var(--sans);letter-spacing:.08em;color:var(--accent)}
+.cover-en{margin:20px 0 0;font:400 111px/.88 Georgia,serif;letter-spacing:-.045em;color:#2d2928}
+.cover-cn{margin:18px 0 0;font:600 54px/1.2 var(--serif);letter-spacing:.02em}
+.cover-role{margin:18px 0 0;font:600 29px/1.45 var(--serif);color:var(--accent)}
+.cover-role mark{padding:0 3px;background:linear-gradient(transparent 69%,#d6a7a8 69%);color:inherit}
+.cover-desc{max-width:810px;margin:13px 0 0;font:400 23px/1.53 var(--sans);color:#4b3f3d}
+.cover-caption{max-width:750px;margin:13px 0 0;font:italic 19px/1.35 Georgia,serif;color:#634d4c}
+.cover-cta{display:inline-block;margin-top:12px;padding-bottom:5px;border-bottom:2px solid currentColor;color:var(--accent);font:700 20px/1.2 var(--sans)}
+.cover-side-note{position:absolute;right:86px;top:539px;width:324px;padding:21px 24px 24px;border-left:4px solid var(--accent);background:rgba(237,214,210,.95);color:#3d3031;font:600 23px/1.48 var(--serif);transform:rotate(1.6deg)}
+.cover-side-note small{display:block;margin-bottom:12px;font:700 15px/1.3 var(--sans);letter-spacing:.16em;color:var(--accent)}
+.cover-source{position:absolute;right:86px;top:784px;padding:6px 11px;background:rgba(237,214,210,.96);font:500 14px/1.2 var(--sans);color:#5b4042}
+
+/* Editorial architecture sheet. */
+.arch-sheet{position:absolute;left:78px;top:98px;width:1442px;height:748px;padding:37px 66px;background:rgba(242,228,221,.985);clip-path:polygon(0 1%,90% 0,100% 4%,99% 95%,91% 100%,1% 98%,0 68%)}
+.arch-head{display:grid;grid-template-columns:830px 1fr;align-items:end;gap:30px;height:173px;border-bottom:1px solid var(--accent)}
+.arch-head h1{margin:10px 0 6px;font:600 65px/1.08 var(--serif)}
+.arch-head h1 i{font-style:normal;color:var(--accent)}
+.arch-head p{align-self:center;margin:0;padding:18px 20px;background:var(--accent-soft);border-left:3px solid var(--accent);font:500 22px/1.45 var(--sans)}
+.arch-flow{position:relative;height:364px;margin-top:23px}
+.arch-flow-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.arch-flow-lines path{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;opacity:.7}
+.arch-flow-lines path.secondary{stroke-dasharray:6 8;opacity:.5}
+.arch-origin{position:absolute;left:0;top:85px;width:355px;padding:17px 20px 19px;background:var(--accent-soft);border-left:3px solid var(--accent)}
+.arch-origin .num{font:italic 28px Georgia,serif;color:var(--accent)}
+.arch-origin h2{margin:2px 0 8px;font:600 42px/1.2 var(--serif)}
+.arch-origin p{margin:0;font:400 21px/1.4 var(--sans)}
+.arch-origin .small{display:block;margin-top:12px;color:var(--accent);font:700 18px/1.3 var(--sans)}
+.arch-hub{position:absolute;left:465px;top:95px;width:211px;height:211px;display:flex;flex-direction:column;justify-content:center;align-items:center;border:3px solid var(--accent);border-radius:50%;background:var(--paper-solid);text-align:center;box-shadow:0 0 0 12px rgba(147,63,74,.09)}
+.arch-hub small{font:700 15px/1.3 var(--sans);color:var(--accent)}
+.arch-hub strong{margin:3px 0;font:500 43px/1.1 Georgia,serif}
+.arch-hub em{font:500 17px/1.4 var(--serif);font-style:normal}
+.arch-agents{position:absolute;left:765px;top:0;width:545px}
+.arch-agent{position:relative;min-height:112px;padding:8px 17px 11px 62px;border-bottom:1px solid var(--accent);background:linear-gradient(90deg,var(--accent-soft),rgba(240,216,215,.55))}
+.arch-agent:nth-child(2){margin-left:24px}
+.arch-agent:nth-child(3){margin-left:48px}
+.arch-agent .ordinal{position:absolute;left:16px;top:10px;font:italic 28px Georgia,serif;color:var(--accent)}
+.arch-agent h3{margin:0;font:600 29px/1.3 var(--serif)}
+.arch-agent p{margin:5px 0 0;font:400 19px/1.45 var(--sans)}
+.arch-foot{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:7px;border-top:1px solid var(--accent);padding-top:13px}
+.arch-foot .annotation{margin:0;padding:0 10px;background:rgba(240,216,215,.62);font:400 18px/1.44 var(--sans)}
+.arch-foot b{color:var(--accent)}
+.arch-status{margin:13px 0 0;padding:7px 12px;background:var(--accent-soft);font:500 17px/1.35 var(--sans)}
+.arch-status strong{color:var(--accent)}
+.arch-art-label{position:absolute;right:16px;top:225px;writing-mode:vertical-rl;color:var(--accent);font:600 14px/1.2 var(--sans);letter-spacing:.2em}
+
+/* Research paper; every note, including the caveat, has its own ground. */
+.tam-paper{position:absolute;left:77px;top:99px;width:1068px;height:745px;background:rgba(229,237,240,.985);clip-path:polygon(0 0,97% 1%,93% 30%,100% 58%,95% 100%,0 98%)}
+.tam-main{position:absolute;inset:0}
+.tam-header{position:absolute;left:145px;top:143px;width:880px}
+.tam-header h1{margin:10px 0 0;font:600 69px/1.07 var(--serif)}
+.tam-header h1 i{font-style:normal;color:var(--accent)}
+.tam-header p{width:835px;margin:14px 0 0;font:400 23px/1.42 var(--sans)}
+.tam-metrics{position:absolute;left:145px;top:416px;width:865px;height:134px;display:flex;align-items:start;gap:23px}
+.tam-metric{width:265px;display:flex;flex-direction:column;align-items:start;padding:5px 12px 12px;background:var(--accent-soft);border-top:3px solid var(--accent)}
+.tam-metric:nth-child(2){transform:translateY(17px)}
+.tam-metric:nth-child(3){transform:translateY(2px)}
+.tam-metric strong{font:400 77px/1.05 Georgia,serif;letter-spacing:-.06em;color:var(--accent)}
+.tam-metric span{padding-top:8px;font:600 23px/1.2 var(--serif)}
+.tam-metrics:after{content:"5 分量表 · n = 175";position:absolute;right:1px;top:-26px;color:var(--accent);font:700 17px/1.2 var(--sans)}
+.tam-path{position:absolute;left:145px;top:604px;width:882px;display:grid;grid-template-columns:1fr 46px 1fr 46px 1fr;align-items:center;gap:7px}
+.tam-node{padding:9px 13px;background:#d3e1e6;border-left:2px solid var(--accent)}
+.tam-node b{display:block;font:600 23px/1.2 var(--serif)}
+.tam-node small{font:500 17px/1.3 var(--sans)}
+.tam-arrow{font:35px/1 var(--serif);color:var(--accent);text-align:center}
+.tam-coeff{position:absolute;left:145px;top:694px;width:884px;display:flex;flex-wrap:wrap;gap:4px 19px;padding:8px 12px;background:var(--accent-soft);font:500 17px/1.28 var(--sans)}
+.tam-coeff b{color:var(--accent)}
+.tam-limits{position:absolute;left:145px;top:778px;width:882px;margin:0;padding:7px 10px;background:#d3e1e6;font:500 16px/1.45 var(--sans)}
+.tam-limits strong{color:var(--accent)}
+.tam-main .edge-note{position:absolute;left:1193px;top:266px;width:310px;margin:0;padding:26px 22px 27px;background:rgba(210,227,234,.97);border-left:4px solid var(--accent);font:500 22px/1.4 var(--serif);transform:rotate(1.2deg)}
+.tam-main .edge-note small{display:block;margin-bottom:14px;color:var(--accent);font:700 17px/1.3 var(--sans)}
+.tam-main .edge-note strong{display:block;font-size:27px}
+.tam-main .edge-note em{font:italic 27px/1.5 Georgia,serif;color:var(--accent)}
+.tam-main .edge-note p{margin:12px 0 0;font:500 20px/1.45 var(--sans)}
+.tam-art-note{position:absolute;left:1193px;top:714px;width:310px;padding:11px 13px;background:rgba(210,227,234,.97);font:500 16px/1.3 var(--sans)}
+
+/* A fixed 16:9 canvas is intentionally fitted, not vertically scrolled. */
+@media(max-width:700px) and (orientation:portrait){
+  body{position:fixed;inset:0;width:100vw;height:100vh;transform:none!important;background:#e7ddd2}
+  body>*{display:none!important}
+  body:before{content:"请横屏查看 16:9 展示页";position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:30px;color:#333;font:600 24px/1.5 var(--serif);text-align:center}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Shared Oil UI page grammar for the remaining editorial chapters. */
+.show-page .art-bg:after{background:rgba(233,226,217,.23)}
+.show-sheet{position:absolute;left:77px;top:98px;width:1445px;height:747px;padding:40px 65px 30px;background:var(--paper);clip-path:polygon(0 .8%,90% 0,100% 4%,98.8% 95%,91% 100%,1% 98.5%,0 69%)}
+.show-page:nth-of-type(even) .show-sheet{clip-path:polygon(1% 0,96% 1%,100% 13%,98% 100%,7% 98%,0 92%,1% 38%)}
+.show-head{position:relative;height:180px;border-bottom:1px solid var(--accent)}
+.show-head h1{margin:10px 0 8px;font:600 62px/1.1 var(--serif);color:#282928}
+.show-head h1 em{font-style:normal;color:var(--accent)}
+.show-head p{max-width:1120px;margin:0;font:400 23px/1.43 var(--sans)}
+.show-body{position:relative;height:442px;margin-top:19px}
+.show-note{position:absolute;left:65px;right:80px;bottom:21px;margin:0;padding:8px 12px;background:var(--accent-soft);font:500 16px/1.34 var(--sans)}
+.show-note b{color:var(--accent)}
+.show-mark{display:block;color:var(--accent);font:italic 26px/1 Georgia,serif}
+.show-label{display:block;margin-bottom:10px;color:var(--accent);font:700 17px/1.25 var(--sans);letter-spacing:.09em}
+.show-body h2,.show-body h3{font-family:var(--serif)}
+.show-body p{font-size:21px;line-height:1.45}
+.show-body .large{font-size:26px;line-height:1.43}
+.show-body .small{font-size:18px;line-height:1.43}
+.show-body .ink{color:var(--accent)}
+.show-body .paper-piece{background:var(--accent-soft);border-left:3px solid var(--accent)}
+.show-body .side-writing{writing-mode:vertical-rl;letter-spacing:.16em;color:var(--accent);font:700 17px/1.2 var(--sans)}
+.show-body .linework{border-top:2px solid var(--accent)}
+
+/* Batch I — course conversion, system overview, three senses, learning loop, game route. */
+.conversion{display:flex;align-items:stretch;gap:36px;padding:18px 0}
+.conversion .source{width:340px;padding:22px 24px;background:var(--accent-soft);clip-path:polygon(0 0,95% 0,100% 22%,96% 100%,0 98%)}
+.conversion .source h2{margin:12px 0;font-size:38px}
+.conversion .source p{margin:0}
+.conversion .bridge{position:relative;flex:1;padding:40px 10px 20px}
+.conversion .bridge:before{content:"";position:absolute;left:0;right:0;top:75px;height:2px;background:var(--accent)}
+.conversion .bridge span{position:relative;display:inline-block;padding:8px 15px;background:var(--paper);font:700 21px var(--serif)}
+.conversion .bridge p{margin:60px 0 0;max-width:390px}
+.conversion .target{width:390px;padding:22px 25px;background:var(--paper-solid);transform:translateY(25px)}
+.conversion .target h2{margin:10px 0 16px;font-size:39px}
+.conversion .target p{margin:0}
+.conversion .mini-rail{display:flex;gap:12px;margin-top:19px;font:700 18px var(--sans);color:var(--accent)}
+.conversion .mini-rail b{border-bottom:2px solid var(--accent)}
+.platform-spine{position:relative;height:100%;padding:24px 0}
+.platform-spine .left-note{position:absolute;left:0;top:44px;width:310px;padding:18px 22px;background:var(--accent-soft)}
+.platform-spine .left-note h2{margin:5px 0 8px;font-size:36px}
+.platform-spine .left-note p{margin:0}
+.platform-spine .spine{position:absolute;left:375px;top:38px;width:550px;height:300px;padding:31px 45px;border:3px solid var(--accent);border-radius:56% 44% 50% 50%;text-align:center;background:var(--paper-solid)}
+.platform-spine .spine h2{font-size:49px;margin:14px 0}
+.platform-spine .spine p{margin:0}
+.platform-spine .agent-notes{position:absolute;right:0;top:28px;width:330px}
+.platform-spine .agent-notes p{margin:0 0 20px;padding:8px 14px;border-bottom:2px solid var(--accent);background:var(--accent-soft);font:600 24px/1.3 var(--serif)}
+.platform-spine .bottom-note{position:absolute;left:55px;bottom:7px;width:1160px;padding:11px 20px;background:var(--accent-soft);font:500 21px/1.4 var(--sans)}
+.course-triptych{display:flex;align-items:stretch;gap:24px;height:421px;padding:5px 0}
+.course-triptych article{position:relative;flex:1;padding:18px;background:var(--accent-soft);border-top:4px solid var(--accent)}
+.course-triptych article:nth-child(2){transform:translateY(19px)}
+.course-triptych article:nth-child(3){transform:translateY(37px)}
+.course-triptych img{width:100%;height:128px;object-fit:cover;filter:saturate(.76)}
+.course-triptych h2{font-size:33px;margin:8px 0}
+.course-triptych p{margin:5px 0;font-size:19px}
+.course-triptych strong{color:var(--accent)}
+.course-triptych .course-no{position:absolute;right:20px;top:10px;font:italic 29px Georgia,serif;color:var(--accent)}
+.learn-loop{position:relative;height:100%}
+.learn-loop .loop-line{position:absolute;left:140px;top:110px;width:1010px;height:220px;border:3px solid var(--accent);border-radius:50%;transform:rotate(-7deg)}
+.learn-loop article{position:absolute;width:335px;min-height:205px;padding:18px 24px;background:var(--accent-soft);border-top:4px solid var(--accent)}
+.learn-loop article:nth-child(2){left:18px;top:47px}
+.learn-loop article:nth-child(3){left:487px;top:156px}
+.learn-loop article:nth-child(4){right:10px;top:26px}
+.learn-loop h2{font-size:37px;margin:10px 0}
+.learn-loop p{margin:0}
+.learn-loop .return-note{position:absolute;left:24px;bottom:3px;padding:9px 14px;background:var(--paper-solid);font:700 20px var(--sans);color:var(--accent)}
+.game-story{position:relative;height:100%}
+.game-story .game-image{position:absolute;right:0;top:10px;width:460px;height:390px;object-fit:cover;filter:saturate(.68)}
+.game-story .game-image-label{position:absolute;right:0;bottom:16px;width:460px;padding:10px 15px;background:var(--accent-soft);font:600 17px/1.3 var(--sans)}
+.game-story .story-steps{position:absolute;left:8px;top:26px;width:810px;display:grid;grid-template-columns:1fr 1fr;gap:19px 34px}
+.game-story .story-steps article{padding:13px 17px;background:var(--accent-soft);border-left:3px solid var(--accent)}
+.game-story .story-steps strong{font:600 28px var(--serif)}
+.game-story .story-steps p{margin:4px 0 0}
+.game-story .game-tail{position:absolute;left:8px;bottom:0;width:810px;padding:11px 17px;background:var(--paper-solid);font:600 20px/1.4 var(--sans)}
+
+/* Batch II — classroom, evidence sources, processing, and working Agent interfaces. */
+.lesson-timeline{height:100%;display:flex;align-items:center;gap:14px}
+.lesson-timeline article{position:relative;flex:1;min-height:250px;padding:18px 18px 24px;background:var(--accent-soft);border-top:4px solid var(--accent)}
+.lesson-timeline article:nth-child(even){transform:translateY(36px)}
+.lesson-timeline article:after{content:"→";position:absolute;right:-23px;top:83px;z-index:1;color:var(--accent);font:34px Georgia,serif}
+.lesson-timeline article:last-child:after{display:none}
+.lesson-timeline h2{font-size:32px;margin:14px 0 10px}
+.lesson-timeline p{margin:0;font-size:19px}
+.lesson-timeline small{display:block;margin-top:16px;color:var(--accent);font:700 16px var(--sans)}
+.source-ledger{display:grid;grid-template-columns:1.3fr 1fr;gap:27px;height:100%}
+.source-ledger .inventory{padding:20px 24px;background:var(--accent-soft)}
+.source-ledger .inventory h2{margin:0 0 16px;font-size:37px}
+.source-ledger .inventory dl{display:grid;grid-template-columns:190px 1fr;gap:16px 13px;margin:0;font-size:21px;line-height:1.4}
+.source-ledger .inventory dt{font-weight:700;color:var(--accent)}
+.source-ledger .inventory dd{margin:0}
+.source-ledger .caution{align-self:end;padding:22px 24px;background:var(--paper-solid);border-left:4px solid var(--accent)}
+.source-ledger .caution h3{margin:0 0 10px;font-size:32px}
+.source-ledger .caution p{margin:0 0 13px}
+.data-river{position:relative;height:100%;display:flex;align-items:center;gap:10px}
+.data-river:before{content:"";position:absolute;left:20px;right:35px;top:49%;height:3px;background:var(--accent)}
+.data-river article{position:relative;flex:1;min-height:220px;padding:18px 12px;background:var(--accent-soft);border-top:4px solid var(--accent)}
+.data-river article:nth-child(even){transform:translateY(43px)}
+.data-river h2{margin:12px 0 8px;font-size:27px}
+.data-river p{font-size:18px;margin:0}
+.data-river small{display:block;margin-top:10px;color:var(--accent);font:700 15px var(--sans)}
+.agent-stage{display:grid;grid-template-columns:690px 1fr;gap:32px;height:100%;padding-top:9px}
+.demo-video{position:relative;height:390px;padding:25px;background:var(--paper-solid);border:3px solid var(--accent);clip-path:polygon(0 0,98% 0,100% 8%,99% 100%,0 97%)}
+.demo-video .play-icon{display:block;margin:35px 0 24px;width:90px;height:90px;border:2px solid var(--accent);border-radius:50%;text-align:center;font:52px/86px Georgia,serif;color:var(--accent)}
+.demo-video h2{font-size:35px;margin:0 0 12px}
+.demo-video p{margin:0 0 14px}
+.demo-video code{display:block;font:600 16px/1.4 Consolas,monospace;word-break:break-all;color:var(--accent)}
+.demo-video video{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#111}
+.demo-video.ready video{display:block}
+.demo-video.ready .video-placeholder{display:none}
+.agent-steps{padding:12px 22px;background:var(--accent-soft)}
+.agent-steps h2{font-size:32px;margin:0 0 14px}
+.agent-steps ol{padding-left:25px;margin:0}
+.agent-steps li{font:500 21px/1.48 var(--sans);margin-bottom:13px}
+.agent-steps li::marker{color:var(--accent);font-family:Georgia,serif}
+.agent-steps p{margin:11px 0 0;padding-top:10px;border-top:1px solid var(--accent);font-size:19px}
+
+/* Batch III — method, outcomes, innovation, and a candid roadmap. */
+.method-sheet{display:grid;grid-template-columns:470px 1fr;gap:44px;height:100%}
+.method-sheet .sample-stack{display:flex;flex-direction:column;gap:12px}
+.method-sheet .sample-stack div{padding:15px 23px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.method-sheet .sample-stack strong{font:400 49px/1 Georgia,serif;color:var(--accent)}
+.method-sheet .sample-stack span{font:500 20px/1.4 var(--sans);margin-left:16px}
+.method-sheet .methods{padding:20px 28px;background:var(--paper-solid)}
+.method-sheet .methods h2{font-size:35px;margin:0 0 16px}
+.method-sheet .methods p{margin:0 0 14px}
+.result-bars{display:grid;grid-template-columns:1fr;gap:11px;height:100%}
+.result-bars article{position:relative;padding:10px 20px 12px;background:var(--accent-soft)}
+.result-bars header{display:flex;align-items:baseline;gap:20px}
+.result-bars h2{font-size:28px;margin:0}
+.result-bars header span{font:600 18px var(--sans);color:var(--accent)}
+.result-bars .bar-line{display:flex;align-items:center;gap:16px;height:39px}
+.result-bars .bar-line small{width:75px;font:600 16px var(--sans)}
+.result-bars .bar-line .bar{height:12px;max-width:790px;background:var(--accent);opacity:.52}
+.result-bars .bar-line.after .bar{opacity:1}
+.result-bars .bar-line b{font:700 19px Georgia,serif;color:var(--accent)}
+.result-bars p{position:absolute;right:20px;top:13px;margin:0;font:600 18px/1.3 var(--sans)}
+.innovation-weave{position:relative;height:100%}
+.innovation-weave article{position:absolute;width:420px;min-height:210px;padding:22px 27px;background:var(--accent-soft);border-top:4px solid var(--accent)}
+.innovation-weave article:nth-child(1){left:15px;top:19px}
+.innovation-weave article:nth-child(2){left:464px;top:95px}
+.innovation-weave article:nth-child(3){right:0;top:5px}
+.innovation-weave h2{font-size:36px;margin:10px 0}
+.innovation-weave p{margin:0}
+.innovation-weave .weave-result{position:absolute;left:175px;bottom:0;width:915px;padding:17px 25px;background:var(--paper-solid);font:600 24px/1.4 var(--serif);text-align:center;color:var(--accent)}
+.risk-ledger{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;height:100%}
+.risk-ledger article{display:grid;grid-template-columns:130px 1fr;align-items:start;gap:14px;padding:15px 20px;background:var(--accent-soft);border-left:3px solid var(--accent)}
+.risk-ledger h2{font-size:28px;margin:0;color:var(--accent)}
+.risk-ledger p{margin:0;font-size:20px}
+.risk-ledger .roadmap{grid-column:1/-1;display:flex;align-items:center;gap:20px;padding:14px 20px;background:var(--paper-solid);font:600 20px/1.4 var(--sans)}
+.risk-ledger .roadmap b{color:var(--accent)}
+
+/* One sampled hue per artwork. All reading surfaces derive their lighter
+   tones from that single accent; the supplied paintings remain untouched. */
+body[data-page-index="1"]{--accent:#36594f}
+body[data-page-index="2"]{--accent:#95506b}
+body[data-page-index="3"]{--accent:#8b4b65}
+body[data-page-index="4"]{--accent:#8b3e61}
+body[data-page-index="5"]{--accent:#853a67}
+body[data-page-index="6"]{--accent:#8a303c}
+body[data-page-index="7"]{--accent:#804838}
+body[data-page-index="8"]{--accent:#6b376d}
+body[data-page-index="9"]{--accent:#344e8a}
+body[data-page-index="10"]{--accent:#82634e}
+body[data-page-index="11"]{--accent:#586289}
+body[data-page-index="12"]{--accent:#26717d}
+body[data-page-index="13"]{--accent:#2f6672}
+body[data-page-index="14"]{--accent:#3557a0}
+/* Pages 15–18 retain their previous backgrounds and now match those images. */
+body[data-page-index="15"]{--accent:#36594f}
+body[data-page-index="16"]{--accent:#8b3e61}
+body[data-page-index="17"]{--accent:#36594f}
+body[data-page-index="18"]{--accent:#95506b}
+
+/* Light frosted paper: 8–16% of the painted backdrop remains visible,
+   blurred behind the text rather than competing with it. */
+.site-header,.folio,.page-next,.cover-folio,.cover-side-note,.cover-source,
+.arch-sheet,.arch-head p,.arch-origin,.arch-hub,.arch-agent,
+.arch-foot .annotation,.arch-status,.tam-paper,.tam-metric,.tam-node,
+.tam-coeff,.tam-limits,.tam-main .edge-note,.tam-art-note,
+.show-sheet,.show-note,.show-body article,.show-body .bridge span,
+.show-body .agent-notes p,.show-body .bottom-note,.show-body .return-note,
+.show-body .game-image-label,.show-body .game-tail,.show-body .inventory,
+.show-body .caution,.show-body .demo-video,.show-body .agent-steps,
+.show-body .sample-stack div,.show-body .methods,.show-body .weave-result,
+.show-body .roadmap{
+  -webkit-backdrop-filter:blur(21px) saturate(.78);
+  backdrop-filter:blur(21px) saturate(.78);
+}
+.art-bg:after,.page-architecture .art-bg:after,.page-tam .art-bg:after,
+.show-page .art-bg:after{
+  background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 8%,transparent),transparent 70%);
+}
+.cover-folio,.arch-sheet,.tam-paper{background:var(--paper)}
+.cover-folio{box-shadow:25px 0 45px color-mix(in srgb,var(--accent) 16%,transparent)}
+.cover-en{color:var(--ink)}
+.cover-role mark{background:linear-gradient(transparent 69%,color-mix(in srgb,var(--accent) 28%,transparent) 69%)}
+.cover-desc,.cover-caption,.cover-side-note,.cover-source{color:color-mix(in srgb,var(--ink) 83%,var(--accent))}
+.cover-side-note,.cover-source,.tam-main .edge-note,.tam-art-note{background:var(--accent-soft)}
+.arch-hub{box-shadow:0 0 0 12px color-mix(in srgb,var(--accent) 10%,transparent)}
+.arch-agent{background:linear-gradient(90deg,var(--accent-soft),color-mix(in srgb,var(--paper) 76%,transparent))}
+.arch-foot .annotation{background:var(--accent-soft)}
+.tam-node,.tam-limits{background:var(--paper-solid)}
+.show-head h1{color:var(--ink)}
+
+/* The cloth edges vary deliberately: some stay clean, while the right-hand
+   cutouts use different rhythms. This changes silhouettes, not content boxes. */
+body[data-page-index="1"] .cover-folio{clip-path:polygon(0 1%,95% 0,99% 14%,94% 32%,100% 54%,96% 74%,92% 100%,0 98%)}
+body[data-page-index="10"] .arch-sheet{clip-path:polygon(0 1%,91% 0,100% 5%,97% 19%,99% 43%,97% 67%,100% 93%,91% 100%,1% 98%,0 68%)}
+body[data-page-index="15"] .tam-paper{clip-path:polygon(0 0,99% 0,100% 100%,0 99%)}
+body[data-page-index="2"] .show-sheet,
+body[data-page-index="4"] .show-sheet,
+body[data-page-index="7"] .show-sheet,
+body[data-page-index="9"] .show-sheet,
+body[data-page-index="12"] .show-sheet,
+body[data-page-index="16"] .show-sheet,
+body[data-page-index="18"] .show-sheet{clip-path:none;border-radius:3px}
+body[data-page-index="3"] .show-sheet{clip-path:polygon(0 1%,92% 0,99% 5%,97% 20%,100% 38%,97.8% 55%,99.6% 76%,96% 99%,1% 98%,0 69%)}
+body[data-page-index="5"] .show-sheet{clip-path:polygon(1% 0,94% 1%,100% 12%,97% 29%,99.5% 54%,97% 82%,93% 100%,5% 98%,0 89%,1% 40%)}
+body[data-page-index="6"] .show-sheet{clip-path:polygon(0 0,94% 1%,100% 7%,98% 25%,99% 46%,97% 66%,100% 86%,94% 100%,0 99%)}
+body[data-page-index="8"] .show-sheet{clip-path:polygon(1% 0,94% 1%,100% 11%,97% 30%,99.5% 55%,97% 82%,93% 100%,5% 98%,0 89%,1% 40%)}
+body[data-page-index="11"] .show-sheet{clip-path:polygon(0 1%,95% 0,99% 4%,98% 29%,100% 44%,98% 71%,99% 93%,92% 100%,0 98%)}
+body[data-page-index="13"] .show-sheet{clip-path:polygon(0 0,93% 0,99% 11%,97% 26%,100% 49%,97% 73%,94% 100%,5% 98%,0 90%,1% 43%)}
+body[data-page-index="14"] .show-sheet{clip-path:polygon(0 0,91% 0,99% 3%,97% 17%,100% 31%,97% 56%,99% 73%,96% 100%,1% 99%,0 65%)}
+body[data-page-index="17"] .show-sheet{clip-path:polygon(0 2%,93% 0,99% 6%,97% 23%,100% 39%,98% 67%,99% 86%,95% 100%,0 98%)}
+
+/* A few curved chapter objects interrupt the rectangular information grid. */
+.conversion .target{border-radius:45% 45% 12% 12%/13% 13% 7% 7%}
+.course-triptych article:nth-child(2){border-radius:46% 46% 7px 7px/13% 13% 7px 7px}
+.lesson-timeline article:nth-child(3){border-radius:45% 55% 18% 18%/18% 18% 8% 8%}
+.data-river article:nth-child(3),.data-river article:nth-child(6){border-radius:48% 48% 12% 12%/17% 17% 7% 7%}
+.source-ledger .caution{border-radius:38% 12% 9% 9%/18% 13% 8% 8%}
+.tam-metric:nth-child(2){border-radius:48% 52% 45% 55%/36% 34% 66% 64%}
+.method-sheet .sample-stack div:first-child{border-radius:55px}
+.result-bars article:nth-child(2){border-radius:0 70px 0 48px}
+.innovation-weave article:nth-child(2){border-radius:40% 45% 18% 12%/20% 22% 12% 9%}
