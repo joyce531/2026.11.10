@@ -144,7 +144,8 @@ class AccountApiTests(unittest.TestCase):
         body = {'video':blob(b'fake-video'), 'portrait':blob(b'fake-photo'),
                 'outfit':'女1', 'background':'雪山', 'style':'写实', 'consent':True}
         with patch('web.tools.account_store.inspect_video', return_value={'duration':6.0,'width':720,'height':720}), \
-             patch('web.tools.account_store.inspect_image'), patch.object(self.runtime, 'dance_submit') as provider:
+             patch('web.tools.account_store.inspect_image'), patch.object(self.runtime, 'dance_asset', return_value=b'offline-reference'), \
+             patch.object(self.runtime, 'dance_submit') as provider:
             code, approval, _ = self.call('/api/agents/dance/requests', body, judge, 'approval_key_123456')
             self.assertEqual(code, 200)
             self.assertEqual(approval['status'], 'pending_approval')

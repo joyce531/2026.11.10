@@ -16,6 +16,7 @@ from PIL import Image, ImageDraw
 
 from web.tools.agent_runtime import Runtime
 from web.tools import mock_api
+from web.tools.account_store import AccountStore
 
 
 def media(raw, mime='application/octet-stream'):
@@ -29,6 +30,16 @@ class RuntimeTest(unittest.TestCase):
 
     def tearDown(self):
         self.temp.cleanup()
+
+    def local_auth(self):
+        store = AccountStore(self.runtime.db)
+        user_id = store.init_admin('owner', 'offline test password 123')
+        _, token, csrf = store.login('owner', 'offline test password 123', '127.0.0.1')
+        return store, user_id, {
+            'Cookie': f'naxi_session={token}; naxi_csrf={csrf}',
+            'X-CSRF-Token': csrf,
+            'Origin': 'http://127.0.0.1:5174',
+        }
 
     def test_dongba_idempotency_and_source(self):
         image = BytesIO()
@@ -96,9 +107,12 @@ class RuntimeTest(unittest.TestCase):
         confirm.assert_called_once()
 
     def test_dance_create_poll_download_once(self):
+        fixture = Path(self.temp.name) / 'reference.bin'
+        fixture.write_bytes(b'offline-reference')
         request = {'video': media(b'mock-video'), 'portrait': media(b'mock-image', 'image/png'),
-                   'outfit': '女1', 'background': '雪山', 'style': '写实'}
+                   'outfit': 'fixture-outfit', 'background': 'fixture-background', 'style': '写实'}
         with patch('web.tools.agent_runtime.inspect_video'), patch('web.tools.agent_runtime.inspect_image'), \
+             patch('web.tools.agent_runtime.choices', return_value={'fixture-outfit': fixture, 'fixture-background': fixture}), \
              patch('web.tools.agent_runtime.submit_videoedit', return_value={'task_id': 'provider-12345678', 'status': 'PENDING', 'model': 'wan2.7-videoedit'}) as submit, \
              patch('web.tools.agent_runtime.query_videoedit', return_value={'status': 'SUCCEEDED', 'video_url': 'https://example.aliyuncs.com/result.mp4'}) as query, \
              patch('web.tools.agent_runtime.download_videoedit', return_value=b'generated-mp4') as download:
@@ -113,7 +127,9 @@ class RuntimeTest(unittest.TestCase):
             query.assert_called_once(); download.assert_called_once()
 
     def test_http_routes_and_range(self):
-        with patch.object(mock_api, '_runtime', self.runtime):
+        store, user_id, auth = self.local_auth()
+        with patch.object(mock_api, '_runtime', self.runtime), patch.object(mock_api, '_accounts', store), \
+             patch.object(self.runtime, 'dance_options', return_value={'outfits': ['a', 'b', 'c', 'd']}):
             server = ThreadingHTTPServer(('127.0.0.1', 0), mock_api.Handler)
             thread = threading.Thread(target=server.serve_forever, daemon=True)
             thread.start()
@@ -126,14 +142,14 @@ class RuntimeTest(unittest.TestCase):
                 buf = BytesIO(); midi.save(file=buf)
                 payload = json.dumps({'filename': 'one.mid', 'file': media(buf.getvalue())}).encode()
                 request = Request(base + '/api/agents/music/recognize', payload,
-                                  {'Content-Type': 'application/json', 'Idempotency-Key': 'http_music_key_01'})
+                                  {**auth, 'Content-Type': 'application/json', 'Idempotency-Key': 'http_music_key_01'})
                 with urlopen(request) as response:
                     self.assertEqual(json.load(response)['result']['note_count'], 1)
                 fake = {'midi': b'MThd1234', 'wav': b'RIFF1234', 'mode': 'local_rules', 'model': None}
                 with patch('web.tools.agent_runtime.arrange_music', return_value=fake):
                     job = self.runtime.arrange({'filename': 'one.mid', 'file': media(buf.getvalue()),
-                                                'asset_ids': ['sample'], 'style': '洞经音乐', 'preservation': 80}, 'http_arrange_key_01')
-                partial = Request(base + job['result']['wav_url'], headers={'Range': 'bytes=0-3'})
+                                                'asset_ids': ['sample'], 'style': '洞经音乐', 'preservation': 80}, 'http_arrange_key_01', user_id)
+                partial = Request(base + job['result']['wav_url'], headers={**auth, 'Range': 'bytes=0-3'})
                 with urlopen(partial) as response:
                     self.assertEqual(response.status, 206)
                     self.assertEqual(response.read(), b'RIFF')
@@ -142,15 +158,21 @@ class RuntimeTest(unittest.TestCase):
 
     def test_dongba_http_local_origins_and_external_rejection(self):
         fake = {'task_id': 'offline', 'agent': 'dongba', 'status': 'completed', 'result': {'source': 'mock'}}
+        store, _, auth = self.local_auth()
         with patch.object(mock_api, '_runtime', self.runtime), patch.object(self.runtime, 'dongba', return_value=fake) as evaluate, \
+             patch.object(mock_api, '_accounts', store), patch.object(mock_api, 'config_value', return_value='false'), \
              patch.dict('os.environ', {'NAXI_API_ENV': ''}):
             server = ThreadingHTTPServer(('127.0.0.1', 0), mock_api.Handler)
             thread = threading.Thread(target=server.serve_forever, daemon=True)
             thread.start()
             try:
                 url = f'http://127.0.0.1:{server.server_port}/api/agents/dongba/evaluate'
+                request_number = 0
                 def send(origin, referer=None, content_type='application/json'):
-                    headers = {'Origin': origin, 'Content-Type': content_type, 'Idempotency-Key': 'offline-key-1234'}
+                    nonlocal request_number
+                    request_number += 1
+                    headers = {**auth, 'Origin': origin, 'Content-Type': content_type,
+                               'Idempotency-Key': f'offline-key-{request_number:04d}'}
                     if referer:
                         headers['Referer'] = referer
                     return urlopen(Request(url, b'{}', headers))
@@ -180,7 +202,7 @@ class RuntimeTest(unittest.TestCase):
     def test_production_origin_is_exact(self):
         self.assertTrue(mock_api.allowed_request('127.0.0.1:8765', 'https://naxi.example',
                         'https://naxi.example/agent/dongba', production=True,
-                        configured_origins='https://naxi.example'))
+                        configured_origins='https://naxi.example', configured_hosts='127.0.0.1'))
         self.assertFalse(mock_api.allowed_request('127.0.0.1:8765', 'https://naxi.example.evil.test',
                          None, production=True, configured_origins='https://naxi.example'))
         self.assertFalse(mock_api.allowed_request('127.0.0.1:8765', None,
