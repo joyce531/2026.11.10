@@ -1,0 +1,6 @@
+glyph_id,chinese_meaning,english_label,image_file,image_path,image_width,image_height
+dongba_01,人,person,dongba_01_person.png,data/glyphs/original/dongba_01_person.png,112,75
+dongba_02,山,mountain,dongba_02_mountain.png,data/glyphs/original/dongba_02_mountain.png,324,216
+dongba_03,水,water,dongba_03_water.png,data/glyphs/original/dongba_03_water.png,134,90
+dongba_04,火,fire,dongba_04_fire.png,data/glyphs/original/dongba_04_fire.png,143,96
+dongba_05,太阳,sun,dongba_05_sun.png,data/glyphs/original/dongba_05_sun.png,155,103

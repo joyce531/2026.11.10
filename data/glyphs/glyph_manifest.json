@@ -1,0 +1,72 @@
+[
+  {
+    "glyph_id": "dongba_01",
+    "chinese_meaning": "人",
+    "english_label": "person",
+    "image_file": "dongba_01_person.png",
+    "image_path": "data/glyphs/original/dongba_01_person.png",
+    "image_width": 112,
+    "image_height": 75,
+    "format": "PNG",
+    "sha256": "970f140dfd812d316da907b7cb17b2af33984ac177d0dcb33a4a1f4023bcb4c5",
+    "readable": true,
+    "is_blank": false,
+    "dark_pixel_count": 824
+  },
+  {
+    "glyph_id": "dongba_02",
+    "chinese_meaning": "山",
+    "english_label": "mountain",
+    "image_file": "dongba_02_mountain.png",
+    "image_path": "data/glyphs/original/dongba_02_mountain.png",
+    "image_width": 324,
+    "image_height": 216,
+    "format": "PNG",
+    "sha256": "ae13efec938ac79e29be25403937ff027ffd21970795e12f6952286529598428",
+    "readable": true,
+    "is_blank": false,
+    "dark_pixel_count": 6216
+  },
+  {
+    "glyph_id": "dongba_03",
+    "chinese_meaning": "水",
+    "english_label": "water",
+    "image_file": "dongba_03_water.png",
+    "image_path": "data/glyphs/original/dongba_03_water.png",
+    "image_width": 134,
+    "image_height": 90,
+    "format": "PNG",
+    "sha256": "497c66b55885c945926aad7714ac2c1715f69ce9df8e050db805afbb7f746a1f",
+    "readable": true,
+    "is_blank": false,
+    "dark_pixel_count": 1560
+  },
+  {
+    "glyph_id": "dongba_04",
+    "chinese_meaning": "火",
+    "english_label": "fire",
+    "image_file": "dongba_04_fire.png",
+    "image_path": "data/glyphs/original/dongba_04_fire.png",
+    "image_width": 143,
+    "image_height": 96,
+    "format": "PNG",
+    "sha256": "bc60b3486c8ced6d5ac8609bf4f7a608775789e2695c0f35163f964f97ea75fc",
+    "readable": true,
+    "is_blank": false,
+    "dark_pixel_count": 2391
+  },
+  {
+    "glyph_id": "dongba_05",
+    "chinese_meaning": "太阳",
+    "english_label": "sun",
+    "image_file": "dongba_05_sun.png",
+    "image_path": "data/glyphs/original/dongba_05_sun.png",
+    "image_width": 155,
+    "image_height": 103,
+    "format": "PNG",
+    "sha256": "8698fa9d1500d00c31c8cfb0cc7b30b773d75838f674ac7812594092c2d9f857",
+    "readable": true,
+    "is_blank": false,
+    "dark_pixel_count": 1985
+  }
+]

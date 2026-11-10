@@ -1,0 +1,17 @@
+# 与当前项目虚拟环境中已验证的版本一致。
+streamlit==1.67.0
+Pillow==13.0.0
+numpy==2.5.4
+jsonschema==4.26.0
+# Optional real-browser smoke test; already installed with this environment.
+websockets==17.4
+# Standalone OpenAI Responses API connectivity test.
+openai==3.46.0
+python-dotenv==1.2.4
+# Milestone 5: MIDI, local audio decoding, safe MusicXML.
+mido==1.3.3
+soundfile==0.14.0
+defusedxml==0.7.1
+opencv-python-headless==5.0.0.93
+# Milestone 5B: Bailian native async video HTTP + temporary private upload.
+requests==2.34.2

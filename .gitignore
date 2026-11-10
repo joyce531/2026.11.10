@@ -15,3 +15,46 @@ __pycache__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Local design tooling, reference files and build output
+.oil-ui/
+html制作/
+docs/milestone6_design/
+web/node_modules/
+web/dist/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+*.log
+logs/
+
+# Player media and local runtime data
+data/dance/dance_portrait_of_me/
+data/handwriting_samples/images/
+data/handwriting_samples/strokes/
+web/public/uploads/
+uploads/
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+*.sqlite3
+
+# Original/reference media without verified public distribution rights.
+# Text catalogs remain versioned; local source media stays in place.
+data/dance/dance_backgrounds/
+data/dance/dance_music/
+data/dance/dance_outfits/*.jpg
+data/dance/dance_videos/
+data/glyphs/original/*.png
+data/glyphs/original/*.import
+data/music/ensemble/
+data/music/instruments/
+data/music/videos/
+data/music/曲谱/
+web/public/game_media/
+web/public/godot/Assets/
+presentation/naxi-html/assets/references/
+presentation/naxi-html/assets/game/
+presentation/naxi-html/assets/evidence/*.png
+presentation/naxi-html/assets/evidence/*.jpg

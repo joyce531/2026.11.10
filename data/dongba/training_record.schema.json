@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Future consented handwriting pair",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["character_id", "reference_image", "user_handwriting_image", "similarity_label", "structure_errors", "evaluation_feedback", "data_source", "consent", "label_source"],
+  "properties": {
+    "character_id": {"type": "string", "minLength": 1},
+    "reference_image": {"type": "string", "minLength": 1},
+    "user_handwriting_image": {"type": "string", "minLength": 1},
+    "similarity_label": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "structure_errors": {"type": "array", "items": {"type": "string"}},
+    "evaluation_feedback": {"type": "array", "items": {"type": "string"}},
+    "data_source": {"type": "string", "minLength": 1},
+    "consent": {"type": "boolean"},
+    "label_source": {"enum": ["unlabeled", "human_reviewed"]},
+    "prototype_score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+    "algorithm_version": {"type": "string"}
+  },
+  "allOf": [
+    {"if": {"properties": {"label_source": {"const": "unlabeled"}}}, "then": {"properties": {"similarity_label": {"type": "null"}}}},
+    {"if": {"properties": {"label_source": {"const": "human_reviewed"}}}, "then": {"properties": {"similarity_label": {"type": "number", "minimum": 0, "maximum": 1}}}}
+  ]
+}

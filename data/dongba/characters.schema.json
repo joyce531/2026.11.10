@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reviewed Dongba teaching catalog",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["character_id", "reference_image", "chinese_meaning", "structure_description", "learning_tips", "data_source", "review_status", "usage_permission"],
+    "properties": {
+      "character_id": {"type": "string", "pattern": "^[A-Za-z0-9_-]+$"},
+      "reference_image": {"type": "string", "minLength": 1},
+      "chinese_meaning": {"type": "string", "minLength": 1},
+      "pronunciation": {"type": ["string", "null"]},
+      "pronunciation_source": {"type": ["string", "null"]},
+      "structure_description": {"type": "string", "minLength": 1},
+      "learning_tips": {"type": "string", "minLength": 1},
+      "data_source": {"type": "string", "minLength": 1},
+      "review_status": {"enum": ["pending", "verified", "rejected"]},
+      "usage_permission": {"enum": ["unknown", "authorized"]},
+      "reviewer": {"type": ["string", "null"]},
+      "reviewed_at": {"type": ["string", "null"]},
+      "alternative_interpretations": {"type": "array", "items": {"type": "string"}}
+    },
+    "allOf": [
+      {"if": {"properties": {"pronunciation": {"type": "string", "minLength": 1}}, "required": ["pronunciation"]},
+       "then": {"required": ["pronunciation_source"], "properties": {"pronunciation_source": {"type": "string", "minLength": 1}}}},
+      {"if": {"properties": {"review_status": {"const": "verified"}}},
+       "then": {"required": ["reviewer", "reviewed_at"], "properties": {"reviewer": {"type": "string", "minLength": 1}, "reviewed_at": {"type": "string", "minLength": 1}}}}
+    ]
+  }
+}
