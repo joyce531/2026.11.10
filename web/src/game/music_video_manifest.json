@@ -1,0 +1,197 @@
+[
+  {
+    "game_path": "res://Assets/music/dongjing/dongjing_01.ogv",
+    "source": "data/music/videos/dongjing_01.ogv",
+    "source_sha256": "91cba55bdc9e15b84bf52725fb1a1e55a6c543e891d4aebe8b4cdc2b182a1bfd",
+    "web_path": "/game_media/music/dongjing_01.mp4",
+    "web_sha256": "4fbc3c87222d84b0019f3b7927a918396fc3dc082f9c96a823850fd81976542f",
+    "source_format": "ogg",
+    "source_duration_seconds": 99.985329,
+    "output_duration_seconds": 99.985329,
+    "source_streams": [
+      {
+        "codec_name": "theora",
+        "codec_type": "video",
+        "width": 1692,
+        "height": 720
+      },
+      {
+        "codec_name": "vorbis",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "output_streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1692,
+        "height": 720
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "reused_existing_mp4": false
+  },
+  {
+    "game_path": "res://Assets/music/baisha/baisha_01.ogv",
+    "source": "data/music/videos/baisha_01.ogv",
+    "source_sha256": "56c4e02d8310feafbee9f3ba68c31348a56bb050cbdbba2ddfeefd0c6e36f3c9",
+    "web_path": "/game_media/music/baisha_01.mp4",
+    "web_sha256": "c9abe4979934dd5320496bd0de8b145af46104d0af9bedc6459f09b2070bb674",
+    "source_format": "ogg",
+    "source_duration_seconds": 36.153537,
+    "output_duration_seconds": 36.153537,
+    "source_streams": [
+      {
+        "codec_name": "theora",
+        "codec_type": "video",
+        "width": 1692,
+        "height": 720
+      },
+      {
+        "codec_name": "vorbis",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "output_streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1692,
+        "height": 720
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "reused_existing_mp4": false
+  },
+  {
+    "game_path": "res://Assets/music/dongjing/dongjing_02.ogv",
+    "source": "data/music/videos/dongjing_02.ogv",
+    "source_sha256": "5fc57dc826f625aa0f6d9439b36e701689b123e55c7aff18634de0f32206b32d",
+    "web_path": "/game_media/music/dongjing_02.mp4",
+    "web_sha256": "a1046fe42dcb2113660529b7fe11409c93de7024b31cbe5cc23e1207892d814a",
+    "source_format": "ogg",
+    "source_duration_seconds": 62.043832,
+    "output_duration_seconds": 62.043832,
+    "source_streams": [
+      {
+        "codec_name": "theora",
+        "codec_type": "video",
+        "width": 1692,
+        "height": 720
+      },
+      {
+        "codec_name": "vorbis",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "output_streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1692,
+        "height": 720
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "reused_existing_mp4": false
+  },
+  {
+    "game_path": "res://Assets/music/baisha/baisha_02.ogv",
+    "source": "data/music/videos/baisha_02.ogv",
+    "source_sha256": "7939feb92833c8a7ac3845d005b5427b54850a2fd0083baca566eed142881c32",
+    "web_path": "/game_media/music/baisha_02.mp4",
+    "web_sha256": "3367e3a26ada90be53d8485eac8721c12828843b457a7713e2310f0752f58efd",
+    "source_format": "ogg",
+    "source_duration_seconds": 43.583946,
+    "output_duration_seconds": 43.583946,
+    "source_streams": [
+      {
+        "codec_name": "theora",
+        "codec_type": "video",
+        "width": 1692,
+        "height": 720
+      },
+      {
+        "codec_name": "vorbis",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "output_streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1692,
+        "height": 720
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "reused_existing_mp4": false
+  },
+  {
+    "game_path": "res://Assets/music/dongjing/dongjing_03.ogv",
+    "source": "data/music/videos/dongjing_03.ogv",
+    "source_sha256": "53399ca737a5fedf03a29d71baee7fdb2ed914d20fe47e932a2f90de68969e0a",
+    "web_path": "/game_media/music/dongjing_03.mp4",
+    "web_sha256": "455155c43972691e96ce366e05ca1adb8e6d44c8149c4f9dd56ceab78a4a10ce",
+    "source_format": "ogg",
+    "source_duration_seconds": 63.738889,
+    "output_duration_seconds": 63.738889,
+    "source_streams": [
+      {
+        "codec_name": "theora",
+        "codec_type": "video",
+        "width": 1692,
+        "height": 720
+      },
+      {
+        "codec_name": "vorbis",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "output_streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1692,
+        "height": 720
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "reused_existing_mp4": false
+  }
+]

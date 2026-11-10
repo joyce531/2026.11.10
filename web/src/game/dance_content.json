@@ -1,0 +1,290 @@
+{
+  "book": {
+    "title": "围成一圈，把生活跳进舞步",
+    "book_texture": "res://Assets/culture_book/book/open_book.png",
+    "page_turn_sfx": "res://Assets/culture_book/audio/page_turn.ogg",
+    "start_button": "开始学打跳",
+    "spreads": [
+      {
+        "title": "围成一圈，把生活跳进舞步",
+        "body": "纳西民间打跳",
+        "illustration": "",
+        "caption": "",
+        "layout": "text_only"
+      },
+      {
+        "title": "大家一起跳",
+        "body": "在丽江部分地区，以笛子或葫芦笙等伴奏的群众舞蹈常被称为“打跳”。\n\n音乐响起，参与者围在一起，共同进入舞步与节奏。",
+        "illustration": "res://Assets/culture_book/illustrations/dance/datiao_circle.png",
+        "caption": "",
+        "layout": "image_left"
+      },
+      {
+        "title": "民间打跳 ≠ 东巴法仪舞蹈",
+        "body": "本关学习的是群众共同参与的民间“打跳”。\n\n它与东巴在特定宗教仪式中进行的法仪舞蹈并不是同一个概念。\n\n所以这一次，我们不是观看仪式，而是加入舞圈。",
+        "illustration": "",
+        "caption": "",
+        "layout": "text_only"
+      },
+      {
+        "title": "生活在脚下",
+        "body": "打跳中可以看到踏步、踢腿、甩手、摇摆等身体动作。\n\n不同地区和舞种形成了不同的动作组合，舞者在共同节奏中不断配合。",
+        "illustration": "res://Assets/culture_book/illustrations/dance/datiao_step.png",
+        "caption": "",
+        "layout": "image_right"
+      },
+      {
+        "title": "身体里的文化记忆",
+        "body": "打跳强调参与和配合。踏步、踢腿、摇摆与队形变化，需要舞者不断协调自己的身体与节奏。\n\n学习传统舞步，不只是“看见”一种文化，也是亲自加入它、体验它。\n\n接下来，不只是看——跟着口诀，把舞步真正跳起来。",
+        "illustration": "res://Assets/culture_book/illustrations/dance/datiao_together.png",
+        "caption": "",
+        "layout": "image_left"
+      }
+    ]
+  },
+  "completion": {
+    "title": "打跳学习完成！",
+    "summary": "从观看到模仿，从口诀到舞步，你已经用身体体验了一段纳西族的文化记忆。",
+    "background": "res://Assets/vn/backgrounds/bg_snow_mountain.png",
+    "illustration": "",
+    "button_text": "继续旅程"
+  },
+  "dance": {
+    "id": "datiao_01",
+    "title": "纳西族打跳学习",
+    "introduction": "通过视频示范和口诀排列学习三个舞步。",
+    "full_video": "res://Assets/dance/datiao/video/datiao_01_full.ogv",
+    "ui": {
+      "overview": "完整舞蹈展示",
+      "learn": "开始学习",
+      "lesson": "舞步拆解与口诀",
+      "arrange": "口诀排列小游戏",
+      "complete": "学习完成",
+      "previous": "上一个舞步",
+      "next": "下一个舞步",
+      "replay": "重新播放",
+      "submit": "提交答案",
+      "clear": "还原",
+      "correct": "正确！",
+      "wrong": "顺序不对，请参考示范后再试一次。",
+      "missing_video": "示范视频尚未提供；请将 .ogv 文件放到数据指定路径。",
+      "video_replay": "回放这个舞步后，排列正确的口诀。",
+      "done": "已完成三个舞步的学习。"
+    },
+    "steps": [
+      {
+        "id": "step_01",
+        "title": "窝热热交错步",
+        "video": "res://Assets/dance/datiao/video/datiao_01_step_01.ogv",
+        "actions": [
+          {
+            "id": "01",
+            "start": null,
+            "end": null,
+            "cue": "左",
+            "instruction": "",
+            "input": "left"
+          },
+          {
+            "id": "02",
+            "start": null,
+            "end": null,
+            "cue": "右",
+            "instruction": "",
+            "input": "right"
+          },
+          {
+            "id": "03",
+            "start": null,
+            "end": null,
+            "cue": "左",
+            "instruction": "",
+            "input": "left"
+          },
+          {
+            "id": "04",
+            "start": null,
+            "end": null,
+            "cue": "左",
+            "instruction": "",
+            "input": "left"
+          },
+          {
+            "id": "05",
+            "start": null,
+            "end": null,
+            "cue": "左踢",
+            "instruction": "",
+            "input": "up"
+          },
+          {
+            "id": "06",
+            "start": null,
+            "end": null,
+            "cue": "右踢",
+            "instruction": "",
+            "input": "up"
+          }
+        ]
+      },
+      {
+        "id": "step_02",
+        "title": "三步跺脚",
+        "video": "res://Assets/dance/datiao/video/datiao_01_step_02.ogv",
+        "actions": [
+          {
+            "id": "01",
+            "start": null,
+            "end": null,
+            "cue": "左",
+            "instruction": "",
+            "input": "left"
+          },
+          {
+            "id": "02",
+            "start": null,
+            "end": null,
+            "cue": "前",
+            "instruction": "",
+            "input": "up"
+          },
+          {
+            "id": "03",
+            "start": null,
+            "end": null,
+            "cue": "左",
+            "instruction": "",
+            "input": "left"
+          },
+          {
+            "id": "04",
+            "start": null,
+            "end": null,
+            "cue": "右",
+            "instruction": "",
+            "input": "right"
+          },
+          {
+            "id": "05",
+            "start": null,
+            "end": null,
+            "cue": "右",
+            "instruction": "",
+            "input": "right"
+          },
+          {
+            "id": "06",
+            "start": null,
+            "end": null,
+            "cue": "前",
+            "instruction": "",
+            "input": "up"
+          },
+          {
+            "id": "07",
+            "start": null,
+            "end": null,
+            "cue": "左",
+            "instruction": "",
+            "input": "left"
+          },
+          {
+            "id": "08",
+            "start": null,
+            "end": null,
+            "cue": "左",
+            "instruction": "",
+            "input": "left"
+          }
+        ]
+      },
+      {
+        "id": "step_03",
+        "title": "阿哩哩转身对跳步",
+        "video": "res://Assets/dance/datiao/video/datiao_01_step_03.ogv",
+        "actions": [
+          {
+            "id": "01",
+            "start": null,
+            "end": null,
+            "cue": "左",
+            "instruction": "",
+            "input": "left"
+          },
+          {
+            "id": "02",
+            "start": null,
+            "end": null,
+            "cue": "右",
+            "instruction": "",
+            "input": "right"
+          },
+          {
+            "id": "03",
+            "start": null,
+            "end": null,
+            "cue": "左踢",
+            "instruction": "",
+            "input": "up"
+          },
+          {
+            "id": "04",
+            "start": null,
+            "end": null,
+            "cue": "右踢",
+            "instruction": "",
+            "input": "up"
+          },
+          {
+            "id": "05",
+            "start": null,
+            "end": null,
+            "cue": "左踢",
+            "instruction": "",
+            "input": "up"
+          },
+          {
+            "id": "06",
+            "start": null,
+            "end": null,
+            "cue": "右",
+            "instruction": "",
+            "input": "right"
+          },
+          {
+            "id": "07",
+            "start": null,
+            "end": null,
+            "cue": "左",
+            "instruction": "",
+            "input": "left"
+          },
+          {
+            "id": "08",
+            "start": null,
+            "end": null,
+            "cue": "右踢",
+            "instruction": "",
+            "input": "up"
+          },
+          {
+            "id": "09",
+            "start": null,
+            "end": null,
+            "cue": "左踢",
+            "instruction": "",
+            "input": "up"
+          },
+          {
+            "id": "10",
+            "start": null,
+            "end": null,
+            "cue": "右踢",
+            "instruction": "",
+            "input": "up"
+          }
+        ]
+      }
+    ]
+  }
+}

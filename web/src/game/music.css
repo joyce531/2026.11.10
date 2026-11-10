@@ -1,0 +1,21 @@
+.music-story .portrait{bottom:210px}
+.game-top-actions{display:flex;gap:8px}
+.music-dialogue{min-height:220px}
+.music-dialogue .primary{float:none;margin-top:14px}
+.music-dialogue .music-player{max-width:480px}
+.music-player{width:100%;margin:12px 0;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.music-player audio{width:min(100%,430px)}
+.music-player video{width:min(100%,520px);max-height:250px;background:#142233;object-fit:contain}
+.music-player button{border:1px solid #b38c60;background:#e5d0a6;color:#283649;padding:8px 13px;border-radius:3px}
+.music-player [role=alert]{width:100%;font-size:13px;color:#a32f25}
+.music-dialogue .music-player [role=alert]{color:#ffd3c6}
+.source-note{font-size:12px;line-height:1.55;color:#784d35}
+.music-dialogue .source-note{display:block;color:#e9c691;max-width:620px}
+.music-book .book-shell{position:relative}
+.music-quiz .question-media{min-height:170px}
+.music-quiz .options button{font-size:18px}
+.chapter-card.live.music-card{background-image:url('/godot/Assets/vn/backgrounds/bg_snow_mountain.png')}
+.music-spotlight{background:#e7dac1 url('/godot/Assets/vn/backgrounds/bg_snow_mountain.png') right center/auto 100% no-repeat;min-height:360px}
+.music-spotlight p{max-width:550px;line-height:1.8}
+@media(max-width:760px){.music-story .game-top,.music-book .game-top,.music-quiz .game-top{flex-wrap:wrap;gap:8px}.music-story .game-top>span,.music-book .game-top>span,.music-quiz .game-top>span{width:100%}.game-top-actions{gap:6px;width:100%;justify-content:flex-end}.game-top-actions button{padding:8px;font-size:11px;white-space:nowrap}.music-story .portrait{bottom:300px;max-height:32vh}.music-dialogue{max-height:55svh;overflow:auto}.music-spotlight{background-size:cover;background-position:center}.music-spotlight p{background:#f2e7d7d9;padding:10px}.music-player video{max-height:190px}}
+.music-quiz .feedback > button.primary{display:block;clear:both;position:relative;z-index:2;margin-top:20px}

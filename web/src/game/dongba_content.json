@@ -1,0 +1,602 @@
+{
+  "quiz": {
+    "title": "东巴文字挑战",
+    "pass_ratio": 0.8,
+    "questions": [
+      {
+        "id": "dongba_t1_person",
+        "type": "image_to_text",
+        "instruction": "这个东巴文字代表什么？",
+        "prompt": {
+          "text": null,
+          "image": "res://Assets/dongba/glyphs/dongba_01_person.png",
+          "audio": "res://Assets/dongba/audio/dongba_01_person.ogg"
+        },
+        "options": [
+          {
+            "text": "人",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "山",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "水",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "火",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 0,
+        "explanation": "人：xi，谐音“西”。\n纳西话中，nu，谐音“努”是疯的意思，所以纳西话中的疯子是：xi nu，谐音“西努”。"
+      },
+      {
+        "id": "dongba_t1_mountain",
+        "type": "image_to_text",
+        "instruction": "这个东巴文字代表什么？",
+        "prompt": {
+          "text": null,
+          "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+          "audio": "res://Assets/dongba/audio/dongba_02_mountain.ogg"
+        },
+        "options": [
+          {
+            "text": "水",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "山",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "火",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "太阳",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 1,
+        "explanation": "山：ju，谐音“具”。丽江有个地方叫大具，夹在玉龙雪山和哈巴雪山中间，所以以山为名。"
+      },
+      {
+        "id": "dongba_t1_water",
+        "type": "image_to_text",
+        "instruction": "这个东巴文字代表什么？",
+        "prompt": {
+          "text": null,
+          "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+          "audio": "res://Assets/dongba/audio/dongba_03_water.ogg"
+        },
+        "options": [
+          {
+            "text": "火",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "人",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "水",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "山",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 2,
+        "explanation": "水：ji，谐音“汲”。可以联想成汲水的“汲”字。"
+      },
+      {
+        "id": "dongba_t1_fire",
+        "type": "image_to_text",
+        "instruction": "这个东巴文字代表什么？",
+        "prompt": {
+          "text": null,
+          "image": "res://Assets/dongba/glyphs/dongba_04_fire.png",
+          "audio": "res://Assets/dongba/audio/dongba_04_fire.ogg"
+        },
+        "options": [
+          {
+            "text": "山",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "水",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "人",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "火",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 3,
+        "explanation": "火：mi，谐音“蜜”。纳西话中美女是 mi zhi，谐音“蜜汁”，可以这么记：纳西姑娘热情似火。"
+      },
+      {
+        "id": "dongba_t1_sun",
+        "type": "image_to_text",
+        "instruction": "这个东巴文字代表什么？",
+        "prompt": {
+          "text": null,
+          "image": "res://Assets/dongba/glyphs/dongba_05_sun.png",
+          "audio": "res://Assets/dongba/audio/dongba_05_sun.ogg"
+        },
+        "options": [
+          {
+            "text": "人",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "太阳",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "山",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "水",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 1,
+        "explanation": "太阳：ni mei，谐音“你美”。在纳西话中女人是 mei，纳西族有很浓厚的母系氏族风俗遗留，所以可以这么记：女人是纳西族人的太阳。藏语的太阳是 ni ma，谐音“尼玛”，摩梭语的太阳是 ni mi，谐音“尼米”，都和纳西语的发音很类似。"
+      },
+      {
+        "id": "dongba_t2_person",
+        "type": "audio_to_image",
+        "instruction": "听读音，选择对应的东巴文字。",
+        "prompt": {
+          "text": null,
+          "image": null,
+          "audio": "res://Assets/dongba/audio/dongba_01_person.ogg"
+        },
+        "options": [
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_01_person.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_04_fire.png",
+            "audio": null
+          }
+        ],
+        "answer_index": 0,
+        "explanation": "人：xi，谐音“西”。\n纳西话中，nu，谐音“努”是疯的意思，所以纳西话中的疯子是：xi nu，谐音“西努”。"
+      },
+      {
+        "id": "dongba_t2_mountain",
+        "type": "audio_to_image",
+        "instruction": "听读音，选择对应的东巴文字。",
+        "prompt": {
+          "text": null,
+          "image": null,
+          "audio": "res://Assets/dongba/audio/dongba_02_mountain.ogg"
+        },
+        "options": [
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_04_fire.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_05_sun.png",
+            "audio": null
+          }
+        ],
+        "answer_index": 1,
+        "explanation": "山：ju，谐音“具”。丽江有个地方叫大具，夹在玉龙雪山和哈巴雪山中间，所以以山为名。"
+      },
+      {
+        "id": "dongba_t2_water",
+        "type": "audio_to_image",
+        "instruction": "听读音，选择对应的东巴文字。",
+        "prompt": {
+          "text": null,
+          "image": null,
+          "audio": "res://Assets/dongba/audio/dongba_03_water.ogg"
+        },
+        "options": [
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_04_fire.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_01_person.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+            "audio": null
+          }
+        ],
+        "answer_index": 2,
+        "explanation": "水：ji，谐音“汲”。可以联想成汲水的“汲”字。"
+      },
+      {
+        "id": "dongba_t2_fire",
+        "type": "audio_to_image",
+        "instruction": "听读音，选择对应的东巴文字。",
+        "prompt": {
+          "text": null,
+          "image": null,
+          "audio": "res://Assets/dongba/audio/dongba_04_fire.ogg"
+        },
+        "options": [
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_01_person.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_04_fire.png",
+            "audio": null
+          }
+        ],
+        "answer_index": 3,
+        "explanation": "火：mi，谐音“蜜”。纳西话中美女是 mi zhi，谐音“蜜汁”，可以这么记：纳西姑娘热情似火。"
+      },
+      {
+        "id": "dongba_t2_sun",
+        "type": "audio_to_image",
+        "instruction": "听读音，选择对应的东巴文字。",
+        "prompt": {
+          "text": null,
+          "image": null,
+          "audio": "res://Assets/dongba/audio/dongba_05_sun.ogg"
+        },
+        "options": [
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_01_person.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_05_sun.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+            "audio": null
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+            "audio": null
+          }
+        ],
+        "answer_index": 1,
+        "explanation": "太阳：ni mei，谐音“你美”。在纳西话中女人是 mei，纳西族有很浓厚的母系氏族风俗遗留，所以可以这么记：女人是纳西族人的太阳。藏语的太阳是 ni ma，谐音“尼玛”，摩梭语的太阳是 ni mi，谐音“尼米”，都和纳西语的发音很类似。"
+      },
+      {
+        "id": "dongba_t3_person",
+        "type": "text_to_image",
+        "instruction": "请选择‘人’对应的东巴文字。",
+        "prompt": {
+          "text": "人",
+          "image": null,
+          "audio": null
+        },
+        "options": [
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_01_person.png",
+            "audio": "res://Assets/dongba/audio/dongba_01_person.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+            "audio": "res://Assets/dongba/audio/dongba_02_mountain.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+            "audio": "res://Assets/dongba/audio/dongba_03_water.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_04_fire.png",
+            "audio": "res://Assets/dongba/audio/dongba_04_fire.ogg"
+          }
+        ],
+        "answer_index": 0,
+        "explanation": "人：xi，谐音“西”。\n纳西话中，nu，谐音“努”是疯的意思，所以纳西话中的疯子是：xi nu，谐音“西努”。"
+      },
+      {
+        "id": "dongba_t3_mountain",
+        "type": "text_to_image",
+        "instruction": "请选择‘山’对应的东巴文字。",
+        "prompt": {
+          "text": "山",
+          "image": null,
+          "audio": null
+        },
+        "options": [
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+            "audio": "res://Assets/dongba/audio/dongba_03_water.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+            "audio": "res://Assets/dongba/audio/dongba_02_mountain.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_04_fire.png",
+            "audio": "res://Assets/dongba/audio/dongba_04_fire.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_05_sun.png",
+            "audio": "res://Assets/dongba/audio/dongba_05_sun.ogg"
+          }
+        ],
+        "answer_index": 1,
+        "explanation": "山：ju，谐音“具”。丽江有个地方叫大具，夹在玉龙雪山和哈巴雪山中间，所以以山为名。"
+      },
+      {
+        "id": "dongba_t3_water",
+        "type": "text_to_image",
+        "instruction": "请选择‘水’对应的东巴文字。",
+        "prompt": {
+          "text": "水",
+          "image": null,
+          "audio": null
+        },
+        "options": [
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_04_fire.png",
+            "audio": "res://Assets/dongba/audio/dongba_04_fire.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_01_person.png",
+            "audio": "res://Assets/dongba/audio/dongba_01_person.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+            "audio": "res://Assets/dongba/audio/dongba_03_water.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+            "audio": "res://Assets/dongba/audio/dongba_02_mountain.ogg"
+          }
+        ],
+        "answer_index": 2,
+        "explanation": "水：ji，谐音“汲”。可以联想成汲水的“汲”字。"
+      },
+      {
+        "id": "dongba_t3_fire",
+        "type": "text_to_image",
+        "instruction": "请选择‘火’对应的东巴文字。",
+        "prompt": {
+          "text": "火",
+          "image": null,
+          "audio": null
+        },
+        "options": [
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+            "audio": "res://Assets/dongba/audio/dongba_02_mountain.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+            "audio": "res://Assets/dongba/audio/dongba_03_water.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_01_person.png",
+            "audio": "res://Assets/dongba/audio/dongba_01_person.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_04_fire.png",
+            "audio": "res://Assets/dongba/audio/dongba_04_fire.ogg"
+          }
+        ],
+        "answer_index": 3,
+        "explanation": "火：mi，谐音“蜜”。纳西话中美女是 mi zhi，谐音“蜜汁”，可以这么记：纳西姑娘热情似火。"
+      },
+      {
+        "id": "dongba_t3_sun",
+        "type": "text_to_image",
+        "instruction": "请选择‘太阳’对应的东巴文字。",
+        "prompt": {
+          "text": "太阳",
+          "image": null,
+          "audio": null
+        },
+        "options": [
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_01_person.png",
+            "audio": "res://Assets/dongba/audio/dongba_01_person.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_05_sun.png",
+            "audio": "res://Assets/dongba/audio/dongba_05_sun.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_02_mountain.png",
+            "audio": "res://Assets/dongba/audio/dongba_02_mountain.ogg"
+          },
+          {
+            "text": null,
+            "image": "res://Assets/dongba/glyphs/dongba_03_water.png",
+            "audio": "res://Assets/dongba/audio/dongba_03_water.ogg"
+          }
+        ],
+        "answer_index": 1,
+        "explanation": "太阳：ni mei，谐音“你美”。在纳西话中女人是 mei，纳西族有很浓厚的母系氏族风俗遗留，所以可以这么记：女人是纳西族人的太阳。藏语的太阳是 ni ma，谐音“尼玛”，摩梭语的太阳是 ni mi，谐音“尼米”，都和纳西语的发音很类似。"
+      },
+      {
+        "id": "dongba_t4_sentence",
+        "type": "sentence_to_text",
+        "instruction": "这句东巴文表达的意思是？",
+        "prompt": {
+          "text": null,
+          "image": "res://Assets/dongba/sentence/dongba_sentence_01.png",
+          "audio": "res://Assets/dongba/sentence/dongba_sentence_01.ogg"
+        },
+        "options": [
+          {
+            "text": "人依山傍水，向火望日",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "厚德载物",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "上善若水",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "日出东方",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 0,
+        "explanation": "这句话由‘人、山、水、火、日’五个字组成。"
+      }
+    ]
+  },
+  "book": {
+    "title": "图画会说话",
+    "book_texture": "res://Assets/culture_book/book/open_book.png",
+    "page_turn_sfx": "res://Assets/culture_book/audio/page_turn.ogg",
+    "start_button": "开始识字",
+    "spreads": [
+      {
+        "title": "图画会说话",
+        "body": "东巴文 · 写在图画里的文化记忆\n\n翻开书页，认识一种至今仍令人着迷的古老文字。",
+        "illustration": "res://Assets/vn/decorations/deco_dongba_painting.png",
+        "caption": "东巴文装饰画",
+        "layout": "image_right"
+      },
+      {
+        "title": "一笔一画，皆有形",
+        "body": "人、鸟、山川、器物……都可以成为表达意义的线索。\n\n东巴文具有鲜明的图画象形特征。读懂一个符号，有时就像读懂一幅小小的画。",
+        "illustration": "res://Assets/dongba/sentence/dongba_sentence_01.png",
+        "caption": "人、山、水、火、太阳等东巴文字形",
+        "layout": "image_left"
+      },
+      {
+        "title": "东巴文 × 甲骨文",
+        "body": "东巴文与甲骨文都具有鲜明的象形特征，因此研究者常将二者放在一起比较。\n\n但东巴文并不是由甲骨文直接演变而来的。\n\n它们为我们观察文字如何从“形象”走向“符号”，提供了不同的珍贵材料。",
+        "illustration": "",
+        "caption": "",
+        "layout": "text_only"
+      },
+      {
+        "title": "一部写在古籍里的文化记忆",
+        "body": "大量东巴文保存在东巴古籍之中。\n\n一页页古籍不仅留下文字，也保存着纳西族关于自然、社会、信仰与生活的文化记忆。",
+        "illustration": "res://Assets/culture_book/illustrations/dongba/dongba_manuscript.png",
+        "caption": "",
+        "layout": "image_left"
+      },
+      {
+        "title": "从丽江，到世界记忆",
+        "body": "2003年，纳西东巴古籍文献被列入联合国教科文组织《世界记忆名录》。\n\n今天，这些古老文字已经不仅属于一座古城，也成为值得共同珍视的人类文化记忆。\n\n现在，你能从这些“图画”中读懂多少？",
+        "illustration": "",
+        "caption": "",
+        "layout": "text_only"
+      }
+    ]
+  },
+  "completion": {
+    "title": "东巴文学习完成！",
+    "summary": "从图画到文字，你已经读懂了纳西文化留下的一些古老符号。",
+    "background": "res://Assets/vn/backgrounds/bg_snow_mountain.png",
+    "illustration": "res://Assets/vn/decorations/deco_dongba_painting.png",
+    "button_text": "继续旅程"
+  }
+}

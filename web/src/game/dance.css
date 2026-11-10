@@ -1,0 +1,24 @@
+.dance-stage{min-height:calc(100vh - 74px);background:#233c50 url('/godot/Assets/vn/backgrounds/bg_in_the_room.png') center/cover}
+.dance-shell{max-width:1080px;margin:26px auto 60px;background:#efe4ca;padding:30px clamp(18px,4vw,50px);box-shadow:0 20px 45px #0008;color:#2e3c43}
+.dance-heading h1{font:normal clamp(34px,5vw,52px) MaShan,serif;margin:8px 0;color:#60422b}
+.dance-heading p{line-height:1.7}
+.dance-progress{display:flex;gap:8px;flex-wrap:wrap;margin:23px 0}
+.dance-progress button{border:1px solid #aa9779;background:#fff6df;padding:10px 13px;color:#304553}
+.dance-progress button.active{background:#a8553a;color:#fff}.dance-progress button.done{background:#40735b;color:#fff}.dance-progress button.skipped{background:#9a8f80;color:#fff}
+.dance-video{max-width:850px;margin:0 auto 18px;background:#0b2030;padding:12px;border:1px solid #ab8259}
+.dance-video video{display:block;width:100%;max-height:min(65vh,580px);aspect-ratio:4/3;object-fit:contain;background:#020607}
+.dance-video-tools{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px;color:#dfcdb1}
+.dance-video-tools button,.dance-actions button,.cue-answer button,.cue-pool button{border:1px solid #a99571;background:#fff8e9;color:#354451;padding:10px 15px;cursor:pointer}
+.dance-video-tools button{background:#28475c;color:#fff}.dance-video [role=alert]{color:#ffe0d0}
+.dance-note{line-height:1.7;margin:18px 0}.dance-shell .primary{padding:12px 18px}
+.cue-card{background:#fff8e8;border-left:5px solid #a8573a;padding:23px;margin:20px 0}
+.cue-card small{display:block;line-height:1.55;margin-top:8px}
+.cue-card h2,.dance-arrange h2,.dance-finish h2{font:normal 31px MaShan,serif;color:#66452e}
+.cue-line{font-size:clamp(21px,3vw,30px);color:#8c3e2d;letter-spacing:.1em}
+.direction-row{display:flex;flex-wrap:wrap;gap:9px;margin:15px 0}.direction-row span{padding:9px 12px;background:#e9d4aa}.direction-row b{color:#a43d31}
+.dance-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:18px 0}.dance-actions.bottom{border-top:1px solid #c7ac85;padding-top:12px}
+.dance-paused,.dance-finish{min-height:300px;display:grid;place-content:center;text-align:center;background:#fff8e9;padding:32px}
+.cue-answer,.cue-pool{min-height:65px;display:flex;flex-wrap:wrap;gap:10px;padding:12px;margin:12px 0;border:1px dashed #b79a6e}.cue-answer button{background:#d4e1db}.cue-pool button{background:#e6d0a4}
+.dance-feedback{padding:14px 18px;background:#f2dcd5;border-left:4px solid #b95641}.dance-feedback.correct{background:#e3efda;border-color:#4d7e5e}
+.dance-end .completion-card button{margin:8px}
+@media(max-width:760px){.dance-shell{margin:0 12px 24px;padding:20px 15px}.dance-video{padding:6px}.dance-video video{max-height:47vh}.dance-video-tools{font-size:11px}.dance-progress button{font-size:12px}.cue-card{padding:15px}.dance-actions button{flex:1 1 auto}.dance-story .portrait{bottom:245px}}

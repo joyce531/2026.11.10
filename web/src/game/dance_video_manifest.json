@@ -1,0 +1,158 @@
+[
+  {
+    "game_path": "res://Assets/dance/datiao/video/datiao_01_full.ogv",
+    "source": "data/dance/dance_videos/datiao_01_full.ogv",
+    "source_sha256": "3624c8c7aa79b663d75cd71f65d034c17b1292f422a8e65027e96c58b358d8bb",
+    "web_path": "/game_media/dance/datiao_01_full.mp4",
+    "web_sha256": "745fd2f41871da0d7e69c1b46f7dbeff8f57f38f766d95eb63eba36e998f146f",
+    "source_format": "ogg",
+    "source_duration_seconds": 177.934853,
+    "output_duration_seconds": 177.934853,
+    "source_streams": [
+      {
+        "codec_name": "theora",
+        "codec_type": "video",
+        "width": 960,
+        "height": 720
+      },
+      {
+        "codec_name": "vorbis",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "output_streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 960,
+        "height": 720
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "reused_existing_mp4": false
+  },
+  {
+    "game_path": "res://Assets/dance/datiao/video/datiao_01_step_01.ogv",
+    "source": "data/dance/dance_videos/datiao_01_step_01.ogv",
+    "source_sha256": "89f0be08d448d468b7588c4607f2a195dc3acedeb238b8d7552f5c95f0374fbe",
+    "web_path": "/game_media/dance/datiao_01_step_01.mp4",
+    "web_sha256": "9b507c499a32fe6b06474cfd22b7a9ed445e8007937eec4dbfccc7c687708134",
+    "source_format": "ogg",
+    "source_duration_seconds": 20.781905,
+    "output_duration_seconds": 20.781905,
+    "source_streams": [
+      {
+        "codec_name": "theora",
+        "codec_type": "video",
+        "width": 1440,
+        "height": 1080
+      },
+      {
+        "codec_name": "vorbis",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "output_streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1440,
+        "height": 1080
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "reused_existing_mp4": false
+  },
+  {
+    "game_path": "res://Assets/dance/datiao/video/datiao_01_step_02.ogv",
+    "source": "data/dance/dance_videos/datiao_01_step_02.ogv",
+    "source_sha256": "19c5fd59d8f1f308b9a1d61ab351aff2f51dc44921408c74516ebebacbe8bd92",
+    "web_path": "/game_media/dance/datiao_01_step_02.mp4",
+    "web_sha256": "878ae80b8f88cc6ebf1502d5acbe0123c45915e38c39ff8c4498c64b8b3e390e",
+    "source_format": "ogg",
+    "source_duration_seconds": 14.210635,
+    "output_duration_seconds": 14.210635,
+    "source_streams": [
+      {
+        "codec_name": "theora",
+        "codec_type": "video",
+        "width": 960,
+        "height": 720
+      },
+      {
+        "codec_name": "vorbis",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "output_streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 960,
+        "height": 720
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "reused_existing_mp4": false
+  },
+  {
+    "game_path": "res://Assets/dance/datiao/video/datiao_01_step_03.ogv",
+    "source": "data/dance/dance_videos/datiao_01_step_03.ogv",
+    "source_sha256": "dde7dcb4ec5e5a4e0c5f798e56f609a322d8572bb1dec7861dde0b5e5ce6e1ef",
+    "web_path": "/game_media/dance/datiao_01_step_03.mp4",
+    "web_sha256": "cae49d08c0aa18c60d16410fbd069be4bfaaa468d24f26a1088b21c9e9df5454",
+    "source_format": "ogg",
+    "source_duration_seconds": 8.939705,
+    "output_duration_seconds": 8.946961,
+    "source_streams": [
+      {
+        "codec_name": "theora",
+        "codec_type": "video",
+        "width": 960,
+        "height": 720
+      },
+      {
+        "codec_name": "vorbis",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "output_streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 960,
+        "height": 720
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "reused_existing_mp4": true
+  }
+]

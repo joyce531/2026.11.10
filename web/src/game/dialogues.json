@@ -1,0 +1,308 @@
+{
+  "clear_story": [
+    {
+      "kind": "background",
+      "value": "res://Assets/vn/backgrounds/bg_in_the_room.png"
+    },
+    {
+      "kind": "join",
+      "value": "join tourist (default) left"
+    },
+    {
+      "kind": "join",
+      "value": "join host (default) right"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "厉害！没想到你这么快就认识了这几个字。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "其实在东巴文的背后，纳西族还有更悠久、更动人的文化。"
+    }
+  ],
+  "dance_intro": [
+    {
+      "kind": "background",
+      "value": "res://Assets/vn/backgrounds/bg_in_the_room.png"
+    },
+    {
+      "kind": "join",
+      "value": "join tourist (default) left"
+    },
+    {
+      "kind": "join",
+      "value": "join host (default) right"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "纳西族是一个能歌善舞的民族。了解完了纳西古乐，让我来教你纳西族特色打跳吧！"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "好呀好呀，纳西族的打跳已经火遍全国，走出国门，走向世界了。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "这次来我正想去古城好好的体验一下呢，但我感觉打跳的舞步好复杂。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "其实，纳西族的打跳舞步大多源自百姓日常务农劳作的动作和自然界动物的动作，一点也不复杂。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "跟着我用口诀记忆，你一定能学会的，来试试吧！"
+    }
+  ],
+  "dance_transition": [
+    {
+      "kind": "background",
+      "value": "res://Assets/vn/backgrounds/bg_in_the_room.png"
+    }
+  ],
+  "dongba_intro": [
+    {
+      "kind": "background",
+      "value": "res://Assets/vn/backgrounds/bg_in_the_room.png"
+    },
+    {
+      "kind": "join",
+      "value": "join tourist (default) left"
+    },
+    {
+      "kind": "join",
+      "value": "join host (default) right"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "东巴文是至今仍在使用的象形文字之一，历史非常悠久。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "它用像图画一样的符号，记录自然与生活：山、水、日、火……"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "很多字，你看着图案，大概就能猜到意思。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "既然你觉得东巴文这么有趣，不如试试看，你能不能真正认识它？"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "好啊，我来挑战一下！"
+    }
+  ],
+  "music_intro": [
+    {
+      "kind": "background",
+      "value": "res://Assets/vn/backgrounds/bg_in_the_room.png"
+    },
+    {
+      "kind": "join",
+      "value": "join tourist (default) left"
+    },
+    {
+      "kind": "join",
+      "value": "join host (default) right"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "你有没有发现，刚才答题的时候，不同结果播放的音乐不一样？"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "来，听听这两段。"
+    },
+    {
+      "kind": "audio",
+      "value": "audio example \"res://Assets/music/stingers/stinger_fail_dongjing.ogg\" [loop=\"false\"]"
+    },
+    {
+      "kind": "wait",
+      "value": "[wait time=\"1.0\"]"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "这是回答错误时播放的音乐：白沙细乐。"
+    },
+    {
+      "kind": "audio",
+      "value": "audio example -"
+    },
+    {
+      "kind": "audio",
+      "value": "audio example \"res://Assets/music/stingers/stinger_win_baisha.ogg\" [loop=\"false\"]"
+    },
+    {
+      "kind": "wait",
+      "value": "[wait time=\"1.0\"]"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "这是回答正确时播放的音乐：洞经音乐。"
+    },
+    {
+      "kind": "audio",
+      "value": "audio example -"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "它们都属于纳西古乐，是纳西族传统音乐的重要组成部分。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "要不要来分辨一下这两种音乐？"
+    }
+  ],
+  "opening": [
+    {
+      "kind": "background",
+      "value": "res://Assets/vn/backgrounds/bg_at_home_yard.png"
+    },
+    {
+      "kind": "join",
+      "value": "join tourist (default) left"
+    },
+    {
+      "kind": "join",
+      "value": "join host (default) right"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "欢迎欢迎！快进来吧。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "哇，你家真有味道！和我平时见到的院子完全不一样。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "这是纳西式的四合院。院子不算大，不过一家人平时生活、聊天、晒太阳，都在这里。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "等等——你家这些木门也太特别了吧！"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "上面这些“涂鸦”是什么？像画又不像画，像字又不像字。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "你看到的是东巴文。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "它是纳西族特有的象形文字，很多符号都保留着很鲜明的图画特征。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "它既可以用来表意，本身也有很强的审美价值。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "难怪，我刚才差点以为这些只是木门上的装饰画。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "哈哈，进屋吧。里面还有个东西，你应该会更感兴趣。"
+    },
+    {
+      "kind": "leave",
+      "value": "leave --All-- [animation=\"Instant\" length=\"0\" wait=\"true\"]"
+    },
+    {
+      "kind": "clear",
+      "value": "[clear time=\"0.2\" portraits=\"false\" music=\"false\"]"
+    },
+    {
+      "kind": "background",
+      "value": "#000000"
+    },
+    {
+      "kind": "narration",
+      "value": "吱呀——推开门"
+    },
+    {
+      "kind": "wait",
+      "value": "[wait time=\"0.8\"]"
+    },
+    {
+      "kind": "clear",
+      "value": "[clear time=\"0.15\" music=\"false\"]"
+    },
+    {
+      "kind": "background",
+      "value": "res://Assets/vn/backgrounds/bg_in_the_room.png"
+    },
+    {
+      "kind": "join",
+      "value": "join tourist (default) left"
+    },
+    {
+      "kind": "join",
+      "value": "join host (default) right"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "看，墙上这块牌匾就是用东巴文写的。上面的意思是“厚德载物”。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "哇塞！真的好有美感，每个字都像一幅小画。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "而且感觉只要仔细看看，就能猜出意思。"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "你看，牌匾上从左往右第三个图案，会不会就是“载”的意思？它看起来多像一个背着东西、弯着身子的小人！"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "host",
+      "value": "哇，你观察得好仔细。既然你觉得东巴文这么有意思，要不要试试看，你到底能猜出多少？"
+    },
+    {
+      "kind": "dialogue",
+      "speaker": "tourist",
+      "value": "好呀！那我就来挑战一下！"
+    }
+  ]
+}

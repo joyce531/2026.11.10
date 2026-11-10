@@ -1,0 +1,185 @@
+{
+  "quiz": {
+    "title": "纳西古乐辨识",
+    "pass_ratio": 0.8,
+    "questions": [
+      {
+        "id": "music_q1",
+        "type": "music_to_text",
+        "instruction": "这段音乐属于哪一种？",
+        "prompt": {
+          "text": null,
+          "image": null,
+          "audio": "res://Assets/music/dongjing/dongjing_01.ogv"
+        },
+        "options": [
+          {
+            "text": "洞经音乐",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "白沙细乐",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 0,
+        "explanation": "这段是洞经音乐。"
+      },
+      {
+        "id": "music_q2",
+        "type": "music_to_text",
+        "instruction": "这段音乐属于哪一种？",
+        "prompt": {
+          "text": null,
+          "image": null,
+          "audio": "res://Assets/music/baisha/baisha_01.ogv"
+        },
+        "options": [
+          {
+            "text": "洞经音乐",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "白沙细乐",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 1,
+        "explanation": "这段是白沙细乐。"
+      },
+      {
+        "id": "music_q3",
+        "type": "music_to_text",
+        "instruction": "这段音乐属于哪一种？",
+        "prompt": {
+          "text": null,
+          "image": null,
+          "audio": "res://Assets/music/dongjing/dongjing_02.ogv"
+        },
+        "options": [
+          {
+            "text": "洞经音乐",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "白沙细乐",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 0,
+        "explanation": "这段是洞经音乐。"
+      },
+      {
+        "id": "music_q4",
+        "type": "music_to_text",
+        "instruction": "这段音乐属于哪一种？",
+        "prompt": {
+          "text": null,
+          "image": null,
+          "audio": "res://Assets/music/baisha/baisha_02.ogv"
+        },
+        "options": [
+          {
+            "text": "洞经音乐",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "白沙细乐",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 1,
+        "explanation": "这段是白沙细乐。"
+      },
+      {
+        "id": "music_q5",
+        "type": "music_to_text",
+        "instruction": "这段音乐属于哪一种？",
+        "prompt": {
+          "text": null,
+          "image": null,
+          "audio": "res://Assets/music/dongjing/dongjing_03.ogv"
+        },
+        "options": [
+          {
+            "text": "洞经音乐",
+            "image": null,
+            "audio": null
+          },
+          {
+            "text": "白沙细乐",
+            "image": null,
+            "audio": null
+          }
+        ],
+        "answer_index": 0,
+        "explanation": "这段是洞经音乐。"
+      }
+    ]
+  },
+  "book": {
+    "title": "一江流水，一曲古乐",
+    "book_texture": "res://Assets/culture_book/book/open_book.png",
+    "page_turn_sfx": "res://Assets/culture_book/audio/page_turn.ogg",
+    "start_button": "开始聆听",
+    "spreads": [
+      {
+        "title": "一江流水，一曲古乐",
+        "body": "当文字记录记忆，音乐保存情感。",
+        "illustration": "",
+        "caption": "",
+        "layout": "text_only"
+      },
+      {
+        "title": "听见丽江的时间",
+        "body": "在丽江长期的历史与文化交流中，不同的音乐传统在这里流传、融合。\n\n今天人们所说的“纳西古乐”中，洞经音乐与白沙细乐是两个重要而又不同的传统。",
+        "illustration": "",
+        "caption": "",
+        "layout": "text_only"
+      },
+      {
+        "title": "洞经音乐",
+        "body": "庄重 · 礼仪 · 秩序\n\n洞经音乐与道教经典及礼仪音乐传统关系密切。传入丽江后，它又不断融入当地音乐元素，逐渐形成具有地方特色的音乐传统。",
+        "illustration": "res://Assets/culture_book/illustrations/music/dongjing_performance.png",
+        "caption": "",
+        "layout": "image_left"
+      },
+      {
+        "title": "乐器中的古老回声",
+        "body": "洞经音乐的演奏中，可以听见吹管、拉弦、弹拨与打击乐器共同形成丰富的声响。\n\n苏古笃、波伯、曲项琵琶等乐器，也体现了丽江音乐长期交流与本土化的痕迹。",
+        "illustration": "res://Assets/culture_book/illustrations/music/naxi_instruments.png",
+        "caption": "",
+        "layout": "image_right"
+      },
+      {
+        "title": "白沙细乐",
+        "body": "哀婉 · 追思 · 低回\n\n白沙细乐与祭奠、送葬和追思传统有着密切联系。它的音乐常呈现缠绵、低回、如泣如诉的情感色彩。",
+        "illustration": "res://Assets/culture_book/illustrations/music/baisha_performance.png",
+        "caption": "",
+        "layout": "image_left"
+      },
+      {
+        "title": "听得出它们的不同吗？",
+        "body": "洞经音乐：庄重 · 礼仪 · 秩序\n\n白沙细乐：哀婉 · 追思 · 低回\n\n横笛是白沙细乐的重要主奏乐器之一，此外还使用直笛、波伯、曲项琵琶、筝、苏古笃、二簧、胡琴等乐器。\n\n别只靠一种乐器判断——接下来，用耳朵寻找答案。",
+        "illustration": "",
+        "caption": "",
+        "layout": "text_only"
+      }
+    ]
+  },
+  "completion": {
+    "title": "纳西古乐学习完成！",
+    "summary": "从庄重典雅到低回婉转，你已经听见了两种不同的纳西音乐记忆。",
+    "background": "res://Assets/vn/backgrounds/bg_snow_mountain.png",
+    "illustration": "",
+    "button_text": "继续旅程"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "Assets/culture_book/audio/page_turn.ogg": {
+    "status": "missing"
+  },
+  "Assets/culture_book/book/open_book.png": {
+    "status": "copied",
+    "sha256": "51e0ca87570ebf0aac8e9317130c2ecd681973ff7a3924a01df3e47c1f44b07c"
+  },
+  "Assets/culture_book/illustrations/dance/datiao_circle.png": {
+    "status": "copied",
+    "sha256": "30f913a9254ca95f71daaa568ac772011d202578bb9e22da8e7b65c55bbd1ba2"
+  },
+  "Assets/culture_book/illustrations/dance/datiao_step.png": {
+    "status": "copied",
+    "sha256": "3caa22ed6037e681e17d3d213b7349acdfafec2ad147fc874d155494c8d3db86"
+  },
+  "Assets/culture_book/illustrations/dance/datiao_together.png": {
+    "status": "copied",
+    "sha256": "9929b088facd8b05dd82652d3ced3bb9f38210f132eac03e04496b7b7f16c454"
+  },
+  "Assets/culture_book/illustrations/dongba/dongba_manuscript.png": {
+    "status": "copied",
+    "sha256": "d7f1fdea74f0cde5b9e009dbb6b16273f274c7a8a6f6cd005dee2bfad75032e1"
+  },
+  "Assets/culture_book/illustrations/music/baisha_performance.png": {
+    "status": "copied",
+    "sha256": "7eb1acabbcbe62d3ed815b7d1416e895754a5b592183fe74f991d23d7992b04b"
+  },
+  "Assets/culture_book/illustrations/music/dongjing_performance.png": {
+    "status": "copied",
+    "sha256": "734b9245370ce47ec4a5887bb798f5881ea0bc0d13a0a4b9d2583db97f64403c"
+  },
+  "Assets/culture_book/illustrations/music/naxi_instruments.png": {
+    "status": "copied",
+    "sha256": "3c7a605cc5bada6be74be3abfd5c5121799f1674bb89a98244182fb1cd80584a"
+  },
+  "Assets/dance/datiao/video/datiao_01_full.ogv": {
+    "status": "copied",
+    "sha256": "3624c8c7aa79b663d75cd71f65d034c17b1292f422a8e65027e96c58b358d8bb"
+  },
+  "Assets/dance/datiao/video/datiao_01_step_01.ogv": {
+    "status": "copied",
+    "sha256": "89f0be08d448d468b7588c4607f2a195dc3acedeb238b8d7552f5c95f0374fbe"
+  },
+  "Assets/dance/datiao/video/datiao_01_step_02.ogv": {
+    "status": "copied",
+    "sha256": "19c5fd59d8f1f308b9a1d61ab351aff2f51dc44921408c74516ebebacbe8bd92"
+  },
+  "Assets/dance/datiao/video/datiao_01_step_03.ogv": {
+    "status": "copied",
+    "sha256": "dde7dcb4ec5e5a4e0c5f798e56f609a322d8572bb1dec7861dde0b5e5ce6e1ef"
+  },
+  "Assets/dongba/audio/dongba_01_person.ogg": {
+    "status": "copied",
+    "sha256": "0bf1cfc14889062df104c801eec748a768d3b4b1fc98d77a0ae181959502b4b8"
+  },
+  "Assets/dongba/audio/dongba_02_mountain.ogg": {
+    "status": "copied",
+    "sha256": "bca355f69a4bfaea4b9ef7e1d1f54d925841a9dbd602d1fdebd1978688354b8c"
+  },
+  "Assets/dongba/audio/dongba_03_water.ogg": {
+    "status": "copied",
+    "sha256": "9366bca71069a92222b313a8f7854f026ee7645ea24162374acb1582b3da1ab2"
+  },
+  "Assets/dongba/audio/dongba_04_fire.ogg": {
+    "status": "copied",
+    "sha256": "c30a5880365eacec0407c483290eb075ed93d438afb8ef3e317dc904c89058ba"
+  },
+  "Assets/dongba/audio/dongba_05_sun.ogg": {
+    "status": "copied",
+    "sha256": "deafd8655b5a2fdda63ef0964a45f2f4bbd6c0d7524b7c5f4e2732d97a22d028"
+  },
+  "Assets/dongba/glyphs/dongba_01_person.png": {
+    "status": "copied",
+    "sha256": "970f140dfd812d316da907b7cb17b2af33984ac177d0dcb33a4a1f4023bcb4c5"
+  },
+  "Assets/dongba/glyphs/dongba_02_mountain.png": {
+    "status": "copied",
+    "sha256": "ae13efec938ac79e29be25403937ff027ffd21970795e12f6952286529598428"
+  },
+  "Assets/dongba/glyphs/dongba_03_water.png": {
+    "status": "copied",
+    "sha256": "497c66b55885c945926aad7714ac2c1715f69ce9df8e050db805afbb7f746a1f"
+  },
+  "Assets/dongba/glyphs/dongba_04_fire.png": {
+    "status": "copied",
+    "sha256": "bc60b3486c8ced6d5ac8609bf4f7a608775789e2695c0f35163f964f97ea75fc"
+  },
+  "Assets/dongba/glyphs/dongba_05_sun.png": {
+    "status": "copied",
+    "sha256": "8698fa9d1500d00c31c8cfb0cc7b30b773d75838f674ac7812594092c2d9f857"
+  },
+  "Assets/dongba/sentence/dongba_sentence_01.ogg": {
+    "status": "missing"
+  },
+  "Assets/dongba/sentence/dongba_sentence_01.png": {
+    "status": "copied",
+    "sha256": "06fdd7d5c8653e719c8d2d0f4af71aaaaa35a367ed18ed9cd368b1957d39657f"
+  },
+  "Assets/dongba/sfx/sfx_correct.ogg": {
+    "status": "copied",
+    "sha256": "1f4281a9e653e81fa9bfcbcef10bc884b0b035df0e267aaec9c97a9ab818eb07"
+  },
+  "Assets/dongba/sfx/sfx_wrong.ogg": {
+    "status": "copied",
+    "sha256": "6bdb8f0f25f114fb722599f182c890b88637cd52c23831e436997d54eae541db"
+  },
+  "Assets/fonts/MaShanZheng-Regular.ttf": {
+    "status": "copied",
+    "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb"
+  },
+  "Assets/music/baisha/baisha_01.ogv": {
+    "status": "copied",
+    "sha256": "56c4e02d8310feafbee9f3ba68c31348a56bb050cbdbba2ddfeefd0c6e36f3c9"
+  },
+  "Assets/music/baisha/baisha_02.ogv": {
+    "status": "copied",
+    "sha256": "7939feb92833c8a7ac3845d005b5427b54850a2fd0083baca566eed142881c32"
+  },
+  "Assets/music/dongjing/dongjing_01.ogv": {
+    "status": "copied",
+    "sha256": "91cba55bdc9e15b84bf52725fb1a1e55a6c543e891d4aebe8b4cdc2b182a1bfd"
+  },
+  "Assets/music/dongjing/dongjing_02.ogv": {
+    "status": "copied",
+    "sha256": "5fc57dc826f625aa0f6d9439b36e701689b123e55c7aff18634de0f32206b32d"
+  },
+  "Assets/music/dongjing/dongjing_03.ogv": {
+    "status": "copied",
+    "sha256": "53399ca737a5fedf03a29d71baee7fdb2ed914d20fe47e932a2f90de68969e0a"
+  },
+  "Assets/music/stingers/stinger_fail_dongjing.ogg": {
+    "status": "copied",
+    "sha256": "89547c77998597340921d801af718e37dd009bfb7b2104db348e2bd778cab636"
+  },
+  "Assets/music/stingers/stinger_win_baisha.ogg": {
+    "status": "copied",
+    "sha256": "c018b8687a7cd32e491022831c4d6333c015f419f5e61a7f398dee13766ee442"
+  },
+  "Assets/vn/backgrounds/bg_ancient_city.png": {
+    "status": "copied",
+    "sha256": "94f7040bb2c7ba779e84449fbfceb3078bad4db81966b113ef3d3e3ff5d61a9e"
+  },
+  "Assets/vn/backgrounds/bg_at_home_yard.png": {
+    "status": "copied",
+    "sha256": "34e18e9f7011f91b30ae2acb4e9e99096516e189585cd82e154ec95953348245"
+  },
+  "Assets/vn/backgrounds/bg_in_the_room.png": {
+    "status": "copied",
+    "sha256": "f5e96375aa33254938e5e6f9f57dc23c7295c3608bc3f92de33a3188e0a34b3c"
+  },
+  "Assets/vn/backgrounds/bg_snow_mountain.png": {
+    "status": "copied",
+    "sha256": "a2bdb3278c473fcc130988743b17605a0738c2af1aafbf487ad0872fdeaa9667"
+  },
+  "Assets/vn/decorations/deco_dongba_painting.png": {
+    "status": "copied",
+    "sha256": "026be7c88e3b3b7995976598af21ff60c94607f069f19c7a76cfa812376f1204"
+  },
+  "Assets/vn/portraits/char_male_casual.png": {
+    "status": "copied",
+    "sha256": "92bc343408e218d7ddb33dae2ab8182b6d65b7cdc5d64c59125fa16851bb77e9"
+  },
+  "Assets/vn/portraits/char_tourist_camera.png": {
+    "status": "copied",
+    "sha256": "0c527ba2993c442bebf80a1f0661a7ee0cb18aa25293b62f55a4a800f1db7b8e"
+  }
+}
